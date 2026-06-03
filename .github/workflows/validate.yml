@@ -1,0 +1,28 @@
+name: Validate skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate marketplace and skills
+        run: python3 scripts/validate.py
+
+      - name: Validate JSON manifests
+        run: |
+          python3 -c "import json; json.load(open('marketplace.json')); print('marketplace.json OK')"
+          python3 -c "import json; json.load(open('.claude-plugin/marketplace.json')); print('plugin marketplace OK')"
+          python3 -c "import json; json.load(open('.claude-plugin/plugin.json')); print('plugin.json OK')"

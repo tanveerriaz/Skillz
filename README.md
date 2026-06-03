@@ -7,10 +7,11 @@
 **Reusable AI-agent skills for builders who ship.**
 _From prompt chaos to repeatable execution._
 
-[![Skills](https://img.shields.io/badge/skills-26-F59E0B?style=for-the-badge&labelColor=0F172A)](docs/SKILL_INDEX.md)
-[![Categories](https://img.shields.io/badge/categories-14-F97316?style=for-the-badge&labelColor=0F172A)](marketplace.json)
+[![Agent Skills](https://img.shields.io/badge/agent%20skills-library-F59E0B?style=for-the-badge&labelColor=0F172A)](docs/SKILL_INDEX.md)
 [![Spec](https://img.shields.io/badge/spec-agentskills.io-FBBF24?style=for-the-badge&labelColor=0F172A)](https://agentskills.io/specification)
 [![Cross-agent](https://img.shields.io/badge/cross--agent-6%20tools-FCD34D?style=for-the-badge&labelColor=0F172A)](#how-to-use-the-skills)
+[![Security-first](https://img.shields.io/badge/security-first-F97316?style=for-the-badge&labelColor=0F172A)](docs/PUBLICATION_CHECKLIST.md)
+[![License: MIT](https://img.shields.io/badge/license-MIT-FBBF24?style=for-the-badge&labelColor=0F172A)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/tanveerriaz/Skillz?style=for-the-badge&color=F59E0B&labelColor=0F172A)](https://github.com/tanveerriaz/Skillz/stargazers)
 
 **Works with:** Claude Code · OpenAI Codex · Cursor · GitHub Copilot · VS Code · Antigravity
@@ -68,7 +69,14 @@ Each skill helps an AI agent do one useful thing better, repeatedly, and safely.
 Every skill lives in `skills/<skill-name>/SKILL.md` with optional `references/`, `scripts/`, `templates/`, and `examples/`. The frontmatter `description` tells an agent when to activate the skill; the body gives it the procedure, checklist, and safety rules.
 
 ### Claude Code
-Copy a skill folder into your project's skills directory (e.g. `.claude/skills/<skill-name>/`), or point Claude Code at this repo. Claude reads the `SKILL.md` description and activates the skill when the task matches.
+Install the whole library as a plugin marketplace:
+
+```bash
+/plugin marketplace add tanveerriaz/Skillz
+/plugin install skillz@skillz
+```
+
+Or copy a single skill folder into your project's skills directory (e.g. `.claude/skills/<skill-name>/`). Either way, Claude reads each `SKILL.md` description and activates the skill when the task matches.
 
 ### Codex
 Reference the relevant `SKILL.md` in your prompt or repo instructions. Paste or link the procedure as the working contract for the task.
@@ -116,10 +124,15 @@ See `docs/SKILL_INDEX.md` for the full grouped index with use cases.
 
 ## How to validate skills
 
-- Confirm every `SKILL.md` has valid `name` + `description` frontmatter.
-- Confirm names follow the naming convention and are unique.
-- Confirm `marketplace.json` is valid JSON and paths resolve.
-- Run `public-repo-safety-scan` over the repo before pushing.
+Run the bundled validator (also runs in CI on every push and PR):
+
+```bash
+python3 scripts/validate.py
+```
+
+It checks frontmatter, naming, duplicates, `marketplace.json` structure and path resolution, and runs a secret / private-data scan. Before publishing, also apply the `public-repo-safety-scan` skill.
+
+> Note: there are two manifests by design — `marketplace.json` is the human- and agent-readable index, and `.claude-plugin/marketplace.json` makes the library installable via Claude Code's `/plugin marketplace add`.
 
 ## Public safety rules
 

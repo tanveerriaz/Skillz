@@ -48,13 +48,13 @@
   <!-- tagline -->
   <text x="218" y="262" class="tg" font-size="30" fill="#E2E8F0">Reusable AI-agent skills for builders who ship.</text>
 
-  <!-- meta chips -->
+  <!-- meta chips (timeless, no counts) -->
   <g class="sm" font-size="17" fill="#FCD34D">
-    <text x="218" y="312">26 SKILLS</text>
-    <text x="360" y="312" fill="#94A3B8">·</text>
-    <text x="380" y="312">14 CATEGORIES</text>
-    <text x="566" y="312" fill="#94A3B8">·</text>
-    <text x="586" y="312">CROSS-AGENT</text>
+    <text x="218" y="312">CROSS-AGENT</text>
+    <text x="352" y="312" fill="#94A3B8">·</text>
+    <text x="372" y="312">SECURITY-FIRST</text>
+    <text x="540" y="312" fill="#94A3B8">·</text>
+    <text x="560" y="312">REUSABLE</text>
   </g>
 
   <!-- from prompt chaos to repeatable execution -->
