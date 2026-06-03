@@ -1,0 +1,37 @@
+# Environment & secrets
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+secrets/
+credentials/
+private/
+
+# Logs & databases
+*.log
+*.sqlite
+*.db
+
+# OS noise
+.DS_Store
+
+# Dependencies & build artifacts
+node_modules/
+venv/
+.venv/
+__pycache__/
+dist/
+build/
+.next/
+coverage/
+.cache/
+tmp/
+
+# Note: skills intentionally ship a placeholder-only .env.example template.
+# It is safe to commit because it contains no real values. If git ignores it
+# via the .env.* rule, force-add it: git add -f skills/secure-env-setup/templates/.env.example

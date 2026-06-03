@@ -1,0 +1,42 @@
+#!/bin/bash
+# Pre-commit hook: block commits that contain secrets.
+# Install: copy to .git/hooks/pre-commit and `chmod +x .git/hooks/pre-commit`
+# Public-safe: contains detection patterns only, no real credentials.
+
+set -euo pipefail
+
+fail=0
+
+# 1. Provider API keys / webhook secrets
+if git diff --cached | grep -qE "(sk-or-v1-|sk-[A-Za-z0-9]{20,}|sk_test_|sk_live_|pk_live_|whsec_)"; then
+  echo "❌ Possible API key / webhook secret detected in staged changes."
+  fail=1
+fi
+
+# 2. JWT-style tokens
+if git diff --cached | grep -qE "eyJ[A-Za-z0-9_-]{30,}\.[A-Za-z0-9_-]{10,}"; then
+  echo "❌ Possible JWT token detected in staged changes."
+  fail=1
+fi
+
+# 3. Database URLs with embedded credentials
+if git diff --cached | grep -qE "(postgresql|postgres|mysql|mongodb)://[^ ]*:[^ ]*@"; then
+  echo "❌ Database URL with embedded credentials detected."
+  fail=1
+fi
+
+# 4. Sensitive filenames being committed
+if git diff --cached --name-only | grep -qE "(^|/)\.env($|\.)|\.(pem|key|p12|pfx)$|(^|/)id_rsa$|(^|/)id_ed25519$"; then
+  echo "❌ Sensitive file (.env / key / cert) staged for commit."
+  fail=1
+fi
+
+if [ "$fail" -ne 0 ]; then
+  echo ""
+  echo "Commit aborted. Remove the secret, load it from an environment variable,"
+  echo "and confirm the file is covered by .gitignore before retrying."
+  exit 1
+fi
+
+echo "✅ Secret scan passed."
+exit 0

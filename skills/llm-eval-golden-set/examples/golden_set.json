@@ -1,0 +1,40 @@
+{
+  "feature": "summarize-text",
+  "description": "Starter golden set. Replace with your own representative, public-safe cases.",
+  "cases": [
+    {
+      "id": "common-short",
+      "input": "Our team shipped the new export feature and fixed two login bugs this week.",
+      "expect": {
+        "must_include_any": ["export", "login"],
+        "max_words": 40,
+        "must_not_invent": true,
+        "format": "single_paragraph"
+      }
+    },
+    {
+      "id": "edge-empty",
+      "input": "",
+      "expect": {
+        "behavior": "return empty or a clear 'no content' message, do not fabricate"
+      }
+    },
+    {
+      "id": "edge-long-list",
+      "input": "1) auth refactor 2) new dashboard 3) billing fix 4) docs update 5) perf tuning",
+      "expect": {
+        "must_include_any": ["dashboard", "billing", "auth"],
+        "format": "bullets_or_short_paragraph",
+        "must_not_invent": true
+      }
+    },
+    {
+      "id": "past-failure-hype",
+      "input": "Updated the onboarding screen copy.",
+      "expect": {
+        "must_not_include": ["revolutionary", "game-changing", "unleash", "🚀"],
+        "tone": "plain, no hype"
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+# Strong .gitignore baseline for public-safe repositories.
+# Append project-specific entries below as needed.
+
+# Environment & secrets
+.env
+.env.*
+*.env
+secrets/
+credentials/
+private/
+
+# Keys & certificates
+*.pem
+*.key
+*.crt
+*.cert
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Backups & dumps (may hide credentials or private data)
+*.backup
+*.bak
+*_backup.*
+*.dump
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# Dependency & build artifacts
+node_modules/
+venv/
+.venv/
+__pycache__/
+dist/
+build/
+.next/
+coverage/
+.cache/
+
+# Logs & OS noise
+*.log
+logs/
+tmp/
+.DS_Store
