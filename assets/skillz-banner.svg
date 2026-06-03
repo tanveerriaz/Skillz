@@ -49,17 +49,11 @@
   <text x="218" y="262" class="tg" font-size="30" fill="#E2E8F0">Reusable AI-agent skills for builders who ship.</text>
 
   <!-- meta chips (timeless, no counts) -->
-  <g class="sm" font-size="17" fill="#FCD34D">
-    <text x="218" y="312">CROSS-AGENT</text>
-    <text x="352" y="312" fill="#94A3B8">·</text>
-    <text x="372" y="312">SECURITY-FIRST</text>
-    <text x="540" y="312" fill="#94A3B8">·</text>
-    <text x="560" y="312">REUSABLE</text>
-  </g>
+  <text x="218" y="312" class="sm" font-size="17" fill="#FCD34D">CROSS-AGENT &#160;&#183;&#160; SECURITY-FIRST &#160;&#183;&#160; REUSABLE</text>
 
   <!-- from prompt chaos to repeatable execution -->
   <text x="218" y="350" class="tg" font-size="16" fill="#64748B">From prompt chaos to repeatable execution.</text>
 
   <!-- signature -->
-  <text x="1184" y="368" text-anchor="end" class="tg" font-size="16" fill="#94A3B8">Curious mind. Builder mode! 🇸🇬</text>
+  <text x="1184" y="368" text-anchor="end" class="tg" font-size="16" fill="#94A3B8">Curious mind. Builder mode!</text>
 </svg>

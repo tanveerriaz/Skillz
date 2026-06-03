@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/skillz-banner.svg" alt="Skillz — Reusable AI-agent skills for builders who ship." width="100%" />
+<img src="assets/skillz-banner.png" alt="Skillz — Reusable AI-agent skills for builders who ship." width="100%" />
 
 <br/>
 
