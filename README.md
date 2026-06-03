@@ -1,8 +1,25 @@
-# Skillz
+<div align="center">
+
+<img src="assets/skillz-banner.svg" alt="Skillz — Reusable AI-agent skills for builders who ship." width="100%" />
+
+<br/>
 
 **Reusable AI-agent skills for builders who ship.**
+_From prompt chaos to repeatable execution._
 
-Curious mind. Builder mode! 🇸🇬
+[![Skills](https://img.shields.io/badge/skills-26-F59E0B?style=for-the-badge&labelColor=0F172A)](docs/SKILL_INDEX.md)
+[![Categories](https://img.shields.io/badge/categories-14-F97316?style=for-the-badge&labelColor=0F172A)](marketplace.json)
+[![Spec](https://img.shields.io/badge/spec-agentskills.io-FBBF24?style=for-the-badge&labelColor=0F172A)](https://agentskills.io/specification)
+[![Cross-agent](https://img.shields.io/badge/cross--agent-6%20tools-FCD34D?style=for-the-badge&labelColor=0F172A)](#how-to-use-the-skills)
+[![Stars](https://img.shields.io/github/stars/tanveerriaz/Skillz?style=for-the-badge&color=F59E0B&labelColor=0F172A)](https://github.com/tanveerriaz/Skillz/stargazers)
+
+**Works with:** Claude Code · OpenAI Codex · Cursor · GitHub Copilot · VS Code · Antigravity
+
+Created by **[Tanveer Riaz](https://github.com/tanveerriaz)** · Curious mind. Builder mode! 🇸🇬
+
+</div>
+
+---
 
 Skillz is a public marketplace of practical [Agent Skills](https://agentskills.io/specification) designed to help AI coding agents move from prompt chaos to repeatable execution.
 
@@ -140,5 +157,19 @@ Skillz gives them structure.
 
 ---
 
+<div align="center">
+
+### ⭐ Star history
+
+[![Star History Chart](https://api.star-history.com/svg?repos=tanveerriaz/Skillz&type=Date)](https://star-history.com/#tanveerriaz/Skillz&Date)
+
+<br/>
+
+<img src="assets/skillz-logo.svg" alt="Skillz" width="64" />
+
+**Built by [Tanveer Riaz](https://github.com/tanveerriaz)**
+
 Skillz — Reusable AI-agent skills for builders who ship.
 Curious mind. Builder mode! 🇸🇬
+
+</div>

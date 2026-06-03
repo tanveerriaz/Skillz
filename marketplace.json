@@ -1,5 +1,6 @@
 {
   "name": "Skillz",
+  "author": "Tanveer Riaz",
   "tagline": "Reusable AI-agent skills for builders who ship.",
   "description": "A public marketplace of practical Agent Skills that help AI coding agents move from prompt chaos to repeatable execution across coding, debugging, architecture, security, deployment, documentation, product, and enterprise delivery.",
   "version": "0.1.0",
