@@ -6,7 +6,7 @@
   "version": "0.1.0",
   "spec": "https://agentskills.io/specification",
   "repository": "https://github.com/tanveerriaz/Skillz",
-  "last_updated": "2026-06-03",
+  "last_updated": "2026-06-23",
   "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
   "categories": [
     "ai-agent-workflows",
@@ -84,6 +84,18 @@
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-06-03"
+    },
+    {
+      "name": "x-twitter-scraper",
+      "description": "Source-backed Xquik integration guidance for X search, user lookup, follower export, media download, monitors, webhooks, MCP setup, and approval-gated posting workflows.",
+      "path": "skills/x-twitter-scraper",
+      "category": "backend",
+      "source_projects": ["api-integration-workflow", "ai-agent-project"],
+      "tags": ["x", "twitter", "api", "mcp", "webhooks", "social-data"],
+      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-23"
     },
     {
       "name": "bug-root-cause-analysis",
