@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "skillz",
   "version": "0.1.0",
-  "description": "Reusable AI-agent skills for builders who ship. 26 practical, public-safe Agent Skills across coding, debugging, architecture, security, deployment, documentation, product, and enterprise delivery.",
+  "description": "Reusable AI-agent skills for builders who ship. 27 practical, public-safe Agent Skills across coding, debugging, architecture, security, deployment, documentation, product, and enterprise delivery.",
   "owner": {
     "name": "Tanveer Riaz",
     "url": "https://github.com/tanveerriaz"
@@ -11,7 +11,7 @@
     {
       "name": "skillz",
       "source": "./",
-      "description": "The full Skillz library — 26 reusable AI-agent skills for builders who ship. Compatible with Claude Code, Codex, Cursor, GitHub Copilot/VS Code, and Antigravity.",
+      "description": "The full Skillz library - 27 reusable AI-agent skills for builders who ship. Compatible with Claude Code, Codex, Cursor, GitHub Copilot/VS Code, and Antigravity.",
       "version": "0.1.0",
       "author": {
         "name": "Tanveer Riaz",

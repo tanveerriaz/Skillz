@@ -1,6 +1,6 @@
 # Skill Index
 
-26 skills across 14 categories. Each skill lives in `skills/<name>/SKILL.md` and is compatible with Claude Code, Codex, Cursor, GitHub Copilot / VS Code, and Antigravity.
+27 skills across 14 categories. Each skill lives in `skills/<name>/SKILL.md` and is compatible with Claude Code, Codex, Cursor, GitHub Copilot / VS Code, and Antigravity.
 
 ## ai-agent-workflows
 
@@ -60,6 +60,7 @@
 ## backend
 
 - **api-service-pattern** — Thin handler / service / repository layering with validation, consistent errors, and DI. _Use when building or refactoring endpoints._
+- **x-twitter-scraper** - Source-backed Xquik REST/MCP integration guidance for X data, monitors, webhooks, and approval-gated posting. _Use when integrating Xquik workflows._
 
 ## data
 

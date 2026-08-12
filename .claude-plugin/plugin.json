@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin.json",
   "name": "skillz",
   "version": "0.1.0",
-  "description": "Reusable AI-agent skills for builders who ship. 26 practical, public-safe skills across coding, debugging, architecture, security, deployment, documentation, product, and enterprise delivery. Skills auto-load from the skills/ directory.",
+  "description": "Reusable AI-agent skills for builders who ship. 27 practical, public-safe skills across coding, debugging, architecture, security, deployment, documentation, product, and enterprise delivery. Skills auto-load from the skills/ directory.",
   "author": {
     "name": "Tanveer Riaz",
     "url": "https://github.com/tanveerriaz"
