@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Design"
+  short_description: "Distinctive interfaces with evidence-led design"
+  default_prompt: "Use $frontend-design to design this interface with a distinctive, evidence-led visual system."

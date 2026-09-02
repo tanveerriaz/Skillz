@@ -17,7 +17,7 @@ Run through this before pushing Skillz to the public GitHub repository.
 
 ## Structure & content
 
-- [x] 26 skills, each with a valid `SKILL.md`
+- [x] 49 skills, each with a valid `SKILL.md`
 - [x] All skill names follow the naming convention; no duplicates
 - [x] All nine body sections present per skill
 - [x] `marketplace.json` is valid JSON and matches the skill folders

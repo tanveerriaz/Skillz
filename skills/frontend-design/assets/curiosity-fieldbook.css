@@ -1,0 +1,250 @@
+/*
+ * Curiosity Fieldbook visual-system scaffold.
+ * Copy this file into a project; do not import it from the skill directory.
+ * Expected font files live at /assets/fonts/ in the target project.
+ */
+
+@font-face {
+  font-family: "Switzer";
+  src: url("/assets/fonts/switzer-300.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("/assets/fonts/switzer-400.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("/assets/fonts/switzer-500.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("/assets/fonts/switzer-600.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/assets/fonts/ibm-plex-mono-400.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/assets/fonts/ibm-plex-mono-500.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  --tr-carbon: #090909;
+  --tr-night: #050505;
+  --tr-panel: #131313;
+  --tr-panel-raised: #171717;
+  --tr-white: #f4f4f0;
+  --tr-silver: #c9c9c3;
+  --tr-smoke: #90908b;
+  --tr-line: #30302d;
+  --tr-blue: #5b76ff;
+  --tr-blue-soft: #b8c4ff;
+  --tr-red: #df2b20;
+  --tr-display: "Switzer", "Helvetica Neue", Arial, sans-serif;
+  --tr-body: "Switzer", "Helvetica Neue", Arial, sans-serif;
+  --tr-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --tr-shell: min(1280px, calc(100vw - 48px));
+  --tr-measure: 44rem;
+  --tr-section-space: clamp(4.875rem, 9vw, 7.875rem);
+  --tr-radius: 2px;
+  --tr-ease: cubic-bezier(.16, 1, .3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.25rem;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--tr-carbon);
+  color: var(--tr-white);
+  font-family: var(--tr-body);
+  font-size: 1rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin-block-start: 0;
+  font-family: var(--tr-display);
+  letter-spacing: -.05em;
+  line-height: .96;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: var(--tr-blue);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 3px solid var(--tr-blue);
+  outline-offset: 3px;
+}
+
+.tr-shell {
+  width: var(--tr-shell);
+  margin-inline: auto;
+}
+
+.tr-section {
+  width: var(--tr-shell);
+  margin-inline: auto;
+  padding-block: var(--tr-section-space);
+  border-bottom: 1px solid var(--tr-line);
+}
+
+.tr-section-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(20rem, .75fr);
+  gap: clamp(2.375rem, 9vw, 8.125rem);
+  align-items: end;
+  margin-bottom: 3.125rem;
+}
+
+.tr-section-intro h2 {
+  max-width: 50rem;
+  margin-bottom: 0;
+  font-size: clamp(2.875rem, 6vw, 5rem);
+  font-weight: 500;
+}
+
+.tr-section-intro p {
+  max-width: 34rem;
+  margin: 0;
+  color: var(--tr-smoke);
+}
+
+.tr-kicker,
+.tr-meta {
+  color: var(--tr-blue-soft);
+  font: 500 .625rem/1.4 var(--tr-mono);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.tr-card {
+  border: 1px solid var(--tr-line);
+  border-radius: var(--tr-radius);
+  background: var(--tr-panel-raised);
+  transition: transform 250ms var(--tr-ease), border-color 200ms ease;
+}
+
+.tr-card:hover {
+  transform: translateY(-4px);
+  border-color: #777773;
+}
+
+.tr-button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  padding: .6875rem 1rem;
+  border: 1px solid var(--tr-white);
+  border-radius: 1px;
+  background: var(--tr-white);
+  color: var(--tr-carbon);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 200ms var(--tr-ease), background 200ms ease, border-color 200ms ease;
+}
+
+.tr-button:hover {
+  transform: translateY(-2px);
+  border-color: var(--tr-blue);
+  background: var(--tr-blue);
+  color: #fff;
+}
+
+.tr-muted {
+  color: var(--tr-smoke);
+}
+
+.tr-measure {
+  max-width: var(--tr-measure);
+}
+
+@media (max-width: 760px) {
+  :root {
+    --tr-shell: calc(100% - 32px);
+    --tr-section-space: clamp(3.75rem, 16vw, 5.5rem);
+  }
+
+  .tr-section-intro {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

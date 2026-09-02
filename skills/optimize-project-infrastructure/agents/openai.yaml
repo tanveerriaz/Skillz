@@ -1,0 +1,6 @@
+interface:
+  display_name: "Cost-First Project Infrastructure"
+  short_description: "Plan fast, low-cost project infrastructure"
+  default_prompt: "Use $optimize-project-infrastructure to choose and scaffold the lowest-cost safe architecture for this project without deploying it."
+policy:
+  allow_implicit_invocation: true

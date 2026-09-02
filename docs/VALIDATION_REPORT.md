@@ -1,19 +1,19 @@
 # Validation Report
 
 Automated validation run over the Skillz marketplace.
-Date: 2026-06-03 · Skills: 26 · Categories: 14
+Date: 2026-09-02 · Skills: 49 · Categories: 14
 
 ## Summary
 
 | Check | Result |
 |-------|--------|
-| SKILL.md frontmatter (name + description) | ✅ 26/26 valid |
-| Frontmatter name matches folder name | ✅ 26/26 match |
+| SKILL.md frontmatter (name + description) | ✅ 49/49 valid |
+| Frontmatter name matches folder name | ✅ 49/49 match |
 | Naming convention (lowercase, hyphenated, ≤64, no edge hyphens) | ✅ all pass |
 | Required body sections (9 per skill) | ✅ all present |
 | Duplicate skill names | ✅ none |
 | marketplace.json valid JSON | ✅ valid |
-| marketplace entries ↔ skill folders | ✅ 26 ↔ 26, no orphans |
+| marketplace entries ↔ skill folders | ✅ 49 ↔ 49, no orphans |
 | Required marketplace keys per entry | ✅ all present |
 | marketplace paths resolve to real folders | ✅ all resolve |
 | `public_safe: true` on every entry | ✅ all true |
@@ -22,7 +22,7 @@ Date: 2026-06-03 · Skills: 26 · Categories: 14
 
 ## Frontmatter validation
 
-All 26 `SKILL.md` files contain a valid `---` frontmatter block with a `name` and a `description` of sufficient length. Each `name` exactly matches its folder name.
+All 49 `SKILL.md` files contain a valid `---` frontmatter block with a `name` and a description of sufficient length. Each `name` exactly matches its folder name.
 
 ## Naming validation
 
@@ -38,15 +38,11 @@ Every skill includes all nine required sections: Purpose, When to Use, Inputs, O
 
 ## marketplace.json validation
 
-Parses as valid JSON. Contains 26 skill entries, one per folder, with no orphan entries and no folders missing an entry. Every entry has all required keys (`name`, `description`, `path`, `category`, `source_projects`, `tags`, `compatibility`, `status`, `public_safe`, `last_updated`), `public_safe` is `true`, and every `path` resolves to an existing directory. All 14 declared categories are used; no entry uses an undeclared category.
+Parses as valid JSON. Contains 49 skill entries, one per folder, with no orphan entries and no folders missing an entry. Every entry has all required keys (`name`, `description`, `path`, `category`, `source_projects`, `tags`, `compatibility`, `status`, `public_safe`, `last_updated`), `public_safe` is `true`, and every `path` resolves to an existing directory. All 14 declared categories are used; no entry uses an undeclared category.
 
 ## Link / reference check
 
-Skill bodies reference sibling files that exist:
-- `public-repo-safety-scan` → `scripts/pre-commit`, `references/gitignore-baseline.txt` ✅
-- `change-log-release-notes` → `templates/daily-log.md`, `templates/release-notes.md` ✅
-- `secure-env-setup` → `templates/.env.example` ✅
-- `llm-eval-golden-set` → `examples/golden_set.json` ✅
+All relative Markdown links in all skill folders resolve to files that exist. Installer metadata, caches, and machine-specific source records were excluded from imported skills.
 
 ## Public-safety scan
 
@@ -59,16 +55,20 @@ Skill bodies reference sibling files that exist:
 | Internal IPs (10.x / 192.168.x / 172.16–31.x) | ✅ none |
 | Real email addresses | ✅ none (only `example` placeholders) |
 | Employer/client names | ✅ none |
+| Gitleaks working-tree scan | ✅ zero findings |
+| Absolute paths containing the local username | ✅ none |
 
 Note: the strings that look like secret patterns inside `public-repo-safety-scan` and `secure-env-setup` are **detection patterns and placeholders** (e.g. `YOUR-API-KEY-HERE`), not real values.
 
 ## Issues found and fixes applied
 
-1. **Renamed folders** during curation needed frontmatter sync — fixed: `git-release-hygiene` and `public-repo-safety-scan` frontmatter names updated to match folders.
-2. **Real bank name in a negative example** (`public-repo-safety-scan`) — replaced with a generic `[specific bank name]` placeholder so no real organization is named anywhere, even in a "what not to do" example.
+1. **Personalized frontend guidance** — generalized into the portable Curiosity Fieldbook visual system and removed personal names, domains, and local file paths.
+2. **Machine-specific infrastructure guidance** — excluded private subscription, domain, device, local-service, and machine-capacity references; retained a generic local-workstation policy.
+3. **Personal publishing defaults** — replaced names, profiles, locations, private project trails, and personal sign-offs with explicit user-approval gates.
+4. **Third-party standalone skills** — preserved or restored their MIT/Apache license files and recorded upstream project attribution in the marketplace manifest.
+5. **Vendor-managed packages and duplicates** — excluded Herdr, Hyperframes, skill-discovery packages, caches, installer metadata, and duplicate aliases rather than republishing them as original work.
 
 ## Remaining recommendations
 
-- Choose and add a `LICENSE` file before publishing (see Publication Checklist). MIT or Apache-2.0 are common for reusable skill libraries.
-- The placeholder `.env.example` is ignored by the `.env.*` rule in `.gitignore`; force-add it (`git add -f skills/secure-env-setup/templates/.env.example`) if you want it tracked.
-- Consider a lightweight CI check (run the validation script on PRs) to keep the marketplace consistent as it grows.
+- Keep the repository validator, per-skill validator, Gitleaks scan, personal-data scan, and executable syntax checks in the release workflow.
+- Recheck upstream licenses and provenance when importing future third-party skills.

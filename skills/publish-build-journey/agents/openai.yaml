@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publish Build Journey"
+  short_description: "Turn completed builds into safe visual stories"
+  default_prompt: "Use $publish-build-journey to prepare a private, privacy-checked story from this completed build."

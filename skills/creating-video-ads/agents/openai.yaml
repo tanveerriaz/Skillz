@@ -1,0 +1,4 @@
+interface:
+  display_name: "Creating Video Ads"
+  short_description: "Build verified, deployment-ready video ads"
+  default_prompt: "Use $creating-video-ads to turn this URL or product brief into a verified social video ad."
