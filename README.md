@@ -107,6 +107,9 @@ Load the skill folders into your skills/instructions directory and reference the
 | `banking-domain` | Generalized, public-safe enterprise delivery patterns |
 | `devops` | Git workflows, release hygiene, repo readiness |
 | `frontend` | Responsive, on-brand, accessible UI changes |
+| `payments` | ISO 20022 / SWIFT message decoding, validation and mapping |
+| `agent-safety` | Approval gates and stopping rules for agents that act on your behalf |
+| `verification` | Builder/verifier separation and evidence-based ship gates |
 | `backend` | APIs, validation, service patterns |
 | `data` | Schema design, RLS, resilient batch processing |
 | `founder-ops` | Turning experiments into reusable assets and systems |

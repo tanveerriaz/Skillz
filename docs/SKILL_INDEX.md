@@ -1,98 +1,102 @@
 # Skill Index
 
-49 skills across 14 categories. Each skill lives in `skills/<name>/SKILL.md` and is compatible with Claude Code, Codex, Cursor, GitHub Copilot / VS Code, and Antigravity.
+47 skills across 17 categories. Each skill lives in `skills/<name>/SKILL.md` and is compatible with Claude Code, Codex, Cursor, GitHub Copilot / VS Code, and Antigravity.
+
 
 ## ai-agent-workflows
 
-- **agent-change-workflow** — Search the repo before writing code, analyze impact in plain language, gate risky changes behind approval, then execute in small commits. _Use when an agent modifies an existing codebase._
-- **agent-handoff** — Write a self-contained handoff note so the next agent or person can resume without re-reading the code. _Use at the end of a session or when switching tools._
-- **agent-memory-file** — Author and maintain CLAUDE.md / AGENTS.md / .cursorrules with durable, concise project context. _Use to give agents consistent ground truth._
-- **llm-prompt-design** — Centralize prompts, separate role/tone/structure/context, and apply anti-AI-slop rules. _Use when building LLM features that must sound human and stay maintainable._
-- **llm-eval-golden-set** — Build a golden set + eval runner to catch LLM-feature regressions. _Use before changing a prompt or model._
-- **local-first-ai-automation** — Safe architecture for local-LLM + browser automations with allowlists and no destructive actions. _Use for personal automations with no cloud SaaS._
-- **full-output-enforcement** — Deliver exhaustive requested outputs without silent omissions or placeholder shortcuts. _Use when completeness is part of correctness._
+- **agent-change-workflow** — Discovery-first workflow for changing existing code: search before writing, analyze impact in plain language, gate risky changes behind approval, then execute in small commits.
+- **agent-handoff** — Produce a self-contained handoff note so the next agent or person can resume work without re-reading the codebase.
+- **agent-memory-file** — Set up and maintain a project's AI-agent memory file (CLAUDE.md, AGENTS.md, .cursorrules) with durable, concise, secret-free project context.
+- **llm-eval-golden-set** — Build a small golden set of inputs with expected qualities and a repeatable eval script to measure LLM-feature quality and catch regressions.
+- **llm-prompt-design** — Centralize LLM prompts, separate role/tone from structure from per-call context, and apply anti-AI-slop rules for human-sounding, maintainable output.
+- **local-first-ai-automation** — Build personal automations on a local LLM and browser automation with allowlisted triggers, no destructive actions, and graceful timeouts.
+- **skill-hygiene-audit** — Use when a skills library has grown past ~20 entries or agents pick the wrong skill — measure size, overlap, description quality, staleness and provenance, then retire/merge/slim safely.
 
 ## coding
 
-- **think-before-coding** — Evaluate at least three approaches with trade-offs before implementing. _Use before any non-trivial change._
-- **ai-code-review** — Review a diff for correctness, security, performance, and maintainability with severity-tagged fixes. _Use before merging, especially AI-generated code._
+- **ai-code-review** — Review a change for correctness, security, performance, and maintainability with severity-tagged findings and concrete fixes.
+- **think-before-coding** — Evaluate at least three distinct solution approaches with brief trade-offs before implementing, so the chosen design fits the existing codebase.
 
 ## debugging
 
-- **bug-root-cause-analysis** — Reproduce → isolate → diagnose → fix → validate, fixing the cause not the symptom. _Use for any bug or "works here but not there" issue._
+- **bug-root-cause-analysis** — Disciplined reproduce -> isolate -> diagnose -> fix -> validate loop so the real cause is fixed and the fix is proven before closing.
 
 ## architecture
 
-- **lean-project-structure** — Single-responsibility files, clear layer boundaries, size limits, no file sprawl. _Use when scaffolding or untangling a project._
-- **optimize-project-infrastructure** — Select the smallest suitable architecture with explicit cost, availability, security, and upgrade triggers. _Use for infrastructure plans, reviews, cost audits, and migrations._
+- **lean-project-structure** — Scaffold or untangle a project into a lean, single-responsibility layout with clear layer boundaries and a no-unnecessary-files rule.
+- **optimize-project-infrastructure** — Select the smallest suitable architecture while making cost, availability, security, operations, and upgrade triggers explicit.
 
 ## security
 
-- **public-repo-safety-scan** — Scan for secrets, private URLs, internal IPs, personal data, and client references before going public. _Use before publishing or auditing a repo._
-- **secure-env-setup** — Env-driven config, placeholder-only `.env.example`, fail-fast startup validation. _Use when setting up config and secrets._
-- **input-validation-prompt-safety** — Validate input, allowlist, and harden prompts against injection. _Use when accepting external input or building LLM prompts._
+- **input-validation-prompt-safety** — Validate external input before use, allowlist commands and senders, and harden LLM prompts against injection so untrusted input cannot break logic or hijack an agent.
+- **public-repo-safety-scan** — Scan staged changes and the working tree for secrets, private URLs, internal IPs, personal data, and client references before a repo goes public.
+- **secure-env-setup** — Environment-variable-driven config with a placeholder-only .env.example and startup validation, so no secret is ever hardcoded or committed.
 
 ## deployment
 
-- **railway-deployment-check** — Verify runtime files, env vars, and start command for managed platforms; favor auto-detection; plan rollback. _Use before/while deploying to Railway, Render, or Fly.io._
+- **cost-aware-deploy-router** — Use when deciding where a workload should run across a personal platform mix — pick the cheapest platform that meets requirements, check quota and credit headroom first, record the decision.
+- **railway-deployment-check** — Verify runtime files, env vars, and start command for managed-platform deploys (Railway, Render, Fly.io), favor auto-detection, and plan rollback.
 
 ## documentation
 
-- **change-log-release-notes** — Daily change journal + release notes derived only from the logs. _Use throughout dev and at release time._
-- **docs-organization** — Keep docs in one categorized `/docs` tree; keep the root minimal. _Use when creating or moving docs._
-- **prd-to-build-plan** — Turn an idea or PRD into a phased plan with scope, milestones, and acceptance criteria. _Use before building a sizeable feature._
-- **publish-build-journey** — Turn verified build milestones into privacy-checked private story drafts with an explicit publication gate. _Use after meaningful builds, experiments, deployments, or corrections._
+- **change-log-release-notes** — Maintain a daily change journal during development and generate user-readable release notes derived only from those logs.
+- **docs-organization** — Keep all documentation in a single categorized /docs tree, prevent stray markdown and SQL files, and keep the project root minimal.
+- **prd-to-build-plan** — Convert a product idea or PRD into a phased, buildable plan with goals, non-goals, scope, milestones, and acceptance criteria.
+- **publish-build-journey** — Turn a verified build milestone into a privacy-checked private story draft with an explicit publication gate.
 
 ## product
 
-- **saas-mvp-planner** — One core user, one problem, smallest valuable solution, explicit not-now list. _Use when shaping a SaaS idea into an MVP._
-- **hackathon-pitch-coach** — Narrow a hackathon brief into a problem, golden demo path, build plan, and judge-ready story. _Use when choosing what to build or preparing the pitch._
-- **creating-video-ads** — Turn product truth into a verified short-form advertisement and delivery-ready render. _Use for Reels, TikToks, Shorts, demos, and launch cuts._
-- **pixel-recap** — Turn approved event or product photographs into a short pixel-art story. _Use for retro recap videos and animated social assets._
+- **creating-video-ads** — Turn a product source or brief into a verified short-form video advertisement and delivery-ready render.
+- **hackathon-pitch-coach** — Turn a hackathon brief, time limit, and rubric into a focused problem, golden demo path, build plan, and judge-ready story.
+- **pixel-recap** — Turn approved event or product photographs into a short pixel-art recap with a clear narrative arc.
+- **saas-mvp-planner** — Shape a SaaS idea into a buildable MVP: one core user, one problem, the smallest valuable solution, a happy-path journey, and an explicit not-now list.
 
 ## banking-domain
 
-- **enterprise-delivery-tracker** — Generalized multi-team programme delivery: intake, prioritization, RAID, status, governance. Organization-agnostic and public-safe. _Use for enterprise/regulated delivery tracking._
+- **enterprise-delivery-tracker** — Generalized, organization-agnostic structure for multi-team programme delivery: intake, prioritization, RAID, status reports, and governance updates.
 
 ## devops
 
-- **git-release-hygiene** — Working-branch-only policy, conventional commits, approval gate before merge/deploy. _Use when committing, branching, or releasing._
-- **repo-readiness-review** — Readiness pass over safety, structure, docs, dependencies, and runnability with a go / fix-first verdict. _Use before publishing, handoff, or release._
+- **git-release-hygiene** — Safe Git workflow: working-branch-only policy, conventional commits, and an explicit-approval gate before any merge to main or production deploy.
+- **repo-readiness-review** — Run a readiness pass over a repo (safety, structure, docs, dependencies, runnability) and return a go / fix-first verdict with a prioritized punch list.
 
 ## frontend
 
-- **safe-ui-enhancement** — Restyle UI without breaking JS/auth hooks; read the brand reference; verify responsive + accessibility. _Use when improving an existing interface._
-- **brandkit** — Create coherent premium brand boards, logo systems, identity decks, and visual-world presentations. _Use for image-led brand-system work._
-- **cinematic-minimal-web** — Build restrained presentation-style websites with editorial typography and purposeful motion. _Use for premium landing pages and portfolios._
-- **design-taste-frontend** — Design distinctive landing pages, portfolios, and redesigns without generic generated-interface patterns. _Use for subject-specific frontend direction._
-- **design-taste-frontend-v1** — Preserve the original high-agency design behavior for exact backward compatibility. _Use only when v1 behavior is required._
-- **frontend-design** — Design intentional interfaces with subject-specific identity and an optional Curiosity Fieldbook visual system. _Use for web art direction and implementation._
-- **gpt-taste** — Create expressive, high-variance marketing interfaces with advanced GSAP motion. _Use for explicitly experimental visual briefs._
-- **high-end-visual-design** — Improve interface craft through precise typography, spacing, depth, composition, and motion. _Use for premium visual polish._
-- **image-to-code** — Generate and inspect visual references, then implement a faithful responsive website. _Use for image-first web builds._
-- **imagegen-frontend-mobile** — Generate consistent premium mobile screen concepts and flows. _Use for image-only iOS, Android, or cross-platform concepts._
-- **imagegen-frontend-web** — Generate one implementation-friendly horizontal image for every website section. _Use for section-level web design references._
-- **industrial-brutalist-ui** — Design dense Swiss-grid and tactical-telemetry interfaces with restrained analog texture. _Use for deliberate industrial-brutalist products._
-- **minimalist-ui** — Create calm editorial interfaces through flat structure, warm monochrome color, and disciplined spacing. _Use for quiet document-style products._
-- **redesign-existing-projects** — Upgrade visual quality without breaking behavior, data, or integration contracts. _Use for safe redesigns of existing sites and apps._
-- **scroll-world** — Build scroll-scrubbed landing pages that move through connected generated scenes. _Use for approved immersive narrative sites._
-- **stitch-design-taste** — Translate a visual direction into a semantic DESIGN.md for Google Stitch. _Use for consistent Stitch screen generation._
-- **ui-ux-pro-max** — Query a local design knowledge base for product-, stack-, and platform-specific UI guidance. _Use for design, implementation, and UX review decisions._
+- **dark-editorial-deck** — Build a talk or product 101 as a hash-routed, keyboard-driven 16:9 web deck with one sentence per slide, live mocks and a mono HUD; ships a starter template.
+- **design-reference-imagegen** — Use when an agent should generate design-reference images (web pages, mobile screens, brand boards) before implementing UI, or turn a reference image into code — one short procedure with per-surface references.
+- **design-taste-frontend** — Design distinctive landing pages, portfolios, and redesigns that avoid generic generated-interface patterns.
+- **frontend-design** — Design and implement intentional web interfaces with subject-specific identity, disciplined typography, and honest interaction language.
+- **industrial-brutalist-ui** — Design dense mechanical interfaces using Swiss grid discipline, tactical telemetry, and restrained analog texture.
+- **plain-instruction-voice** — Write talk, onboarding and product copy in short declarative second-person sentences with explicit stopping rules and no machine jargon.
+- **product-mock-illustration** — Illustrate concepts with small live HTML/CSS product mocks (chat, notifications, settings, terminal, approval dialogs) and original blob mascots instead of stock images.
+- **quiet-dark-tokens** — Apply a calm near-monochrome dark design system: exact tokens, type scale, radii, shadows and rules for one accent colour on a blue-black ground.
+- **redesign-without-breaking** — Use when upgrading an existing UI to premium quality without breaking JS, auth or data hooks — scan, diagnose generic patterns, protect the hooks, fix in place, verify.
+- **restrained-product-motion** — Add calm motion to decks, pages and product mocks: one-time rise-in entrances, millimetre-scale idle loops, blinking mascots, reduced-motion by default.
+- **stitch-design-taste** — Translate a visual direction into a semantic DESIGN.md that Google Stitch can apply consistently across screens.
+- **ui-ux-pro-max** — Use a searchable design knowledge base to make evidence-backed UI decisions across products, platforms, and technology stacks. _(external — pinned upstream)_
 
 ## backend
 
-- **api-service-pattern** — Thin handler / service / repository layering with validation, consistent errors, and DI. _Use when building or refactoring endpoints._
+- **api-service-pattern** — Clean backend layering: thin route handler, service layer, repository for data access, with validation, consistent errors, and dependency injection.
 
 ## data
 
-- **supabase-data-design** — Consistent naming, RLS by default, sensible indexes, tables-vs-JSON guidance. _Use when designing a Postgres/Supabase schema._
-- **resilient-batch-processing** — Process many files/records so one bad item never stops the run; isolate, log, clean up, summarize. _Use for OCR, imports, and bulk transforms._
-- **scrapecreators-api** — Retrieve permitted public social-media data through documented API endpoints. _Use for scoped profile, post, video, transcript, ad, trend, and engagement research._
+- **resilient-batch-processing** — Process many files or records so one bad item never stops the run: isolate failures, log with identifiers, clean up temp files, and summarize results and errors.
+- **supabase-data-design** — Design Postgres/Supabase-style schemas with consistent naming, row-level security by default, sensible indexes, and a clear tables-vs-JSON decision.
 
 ## founder-ops
 
-- **founder-validation-loop** — Hypothesis → cheapest test → signal → decide → capture, turning experiments into reusable assets. _Use when running experiments or extracting reusable wins._
+- **founder-validation-loop** — Turn experiments into validated, reusable assets via a tight hypothesis -> cheapest test -> signal -> decide -> capture loop.
 
-## Compatibility notes
+## payments
 
-All skills use the universal `SKILL.md` format and are tool-agnostic. Skills that ship a `scripts/` helper (e.g. `public-repo-safety-scan`) assume a POSIX shell with Git. Skills that ship `templates/` or `examples/` (change-log, secure-env-setup, llm-eval-golden-set) are starting points to copy and adapt.
+- **payments-message-decoder** — Use when reading, explaining, mapping, validating or generating ISO 20022 (pain/pacs/camt) or SWIFT MT payment messages, diagnosing rejections, or building parsers and synthetic fixtures.
+
+## agent-safety
+
+- **agent-approval-gates** — Use when building or reviewing an agent that acts on a user's behalf — classify actions as reversible/irreversible, gate the irreversible ones behind a human approval, write the stopping rule into the task, and test that the gate fires.
+
+## verification
+
+- **verification-loop** — Use when an agent's output will be relied on — separate builder from an independent verifier, write an executable spec first, replay a golden set, and gate the ship decision on evidence.

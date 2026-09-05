@@ -45,6 +45,8 @@ Use when starting a project that AI agents will work on, when conventions keep g
 
 # Edge Cases
 
+- Multiple agent tools on one machine → keep `AGENTS.md` as the canonical file and have `CLAUDE.md` / `.cursor/rules` reference it; install shared skills once in `~/.agents/skills/<name>` and symlink into each tool's skills folder rather than copying.
+
 - **Multiple tools in use:** keep one canonical file and have others reference it to avoid drift.
 - **Monorepo:** consider a root memory file plus scoped per-package notes.
 - **Rules conflict:** state precedence explicitly (e.g. "security rules override all others").
