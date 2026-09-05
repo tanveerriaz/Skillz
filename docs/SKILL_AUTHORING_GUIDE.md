@@ -52,7 +52,7 @@ description: <clear activation description — when to use this skill>
 
 **Good names:** `agent-handoff`, `repo-readiness-review`, `secure-env-setup`, `saas-mvp-planner`, `railway-deployment-check`, `bug-root-cause-analysis`, `prd-to-build-plan`, `ai-code-review`, `public-repo-safety-scan`, `git-release-hygiene`, `founder-validation-loop`.
 
-**Bad names:** `my-scb-process`, `tanveer-project-helper`, `random-prompts`, `project1-skill`, `ai-stuff`, `super-agent`, `fix-everything`.
+**Bad names:** `my-employer-process`, `alex-project-helper`, `random-prompts`, `project1-skill`, `ai-stuff`, `super-agent`, `fix-everything`.
 
 ## Activation-description guidance
 

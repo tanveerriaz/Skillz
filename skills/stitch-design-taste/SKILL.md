@@ -1,221 +1,73 @@
 ---
 name: stitch-design-taste
-description: Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards — strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance.
+description: Use when a project will generate screens with Google Stitch and needs a DESIGN.md that Stitch can follow consistently. Translates a product brief and visual direction into a semantic design system file with named colors and hex codes, typography rules, component behaviors, layout and responsive principles, motion philosophy, and an explicit list of banned generic patterns.
 ---
 
-# Stitch Design Taste — Semantic Design System Skill
-
-## Overview
-This skill generates `DESIGN.md` files optimized for Google Stitch screen generation. It translates the battle-tested anti-slop frontend engineering directives into Stitch's native semantic design language — descriptive, natural-language rules paired with precise values that Stitch's AI agent can interpret to produce premium, non-generic interfaces.
-
-The generated `DESIGN.md` serves as the **single source of truth** for prompting Stitch to generate new screens that align with a curated, high-agency design language. Stitch interprets design through **"Visual Descriptions"** supported by specific color values, typography specs, and component behaviors.
-
-## Prerequisites
-- Access to Google Stitch via [labs.google/stitch](https://labs.google/stitch)
-- Optionally: Stitch MCP Server for programmatic integration with Cursor, Antigravity, or Gemini CLI
-
-## The Goal
-Generate a `DESIGN.md` file that encodes:
-1. **Visual atmosphere** — the mood, density, and design philosophy
-2. **Color calibration** — neutrals, accents, and banned patterns with hex codes
-3. **Typographic architecture** — font stacks, scale hierarchy, and anti-patterns
-4. **Component behaviors** — buttons, cards, inputs with interaction states
-5. **Layout principles** — grid systems, spacing philosophy, responsive strategy
-6. **Motion philosophy** — animation engine specs, spring physics, perpetual micro-interactions
-7. **Anti-patterns** — explicit list of banned AI design clichés
-
-## Analysis & Synthesis Instructions
-
-### 1. Define the Atmosphere
-Evaluate the target project's intent. Use evocative adjectives from the taste spectrum:
-- **Density:** "Art Gallery Airy" (1–3) → "Daily App Balanced" (4–7) → "Cockpit Dense" (8–10)
-- **Variance:** "Predictable Symmetric" (1–3) → "Offset Asymmetric" (4–7) → "Artsy Chaotic" (8–10)
-- **Motion:** "Static Restrained" (1–3) → "Fluid CSS" (4–7) → "Cinematic Choreography" (8–10)
-
-Default baseline: Variance 8, Motion 6, Density 4. Adapt dynamically based on user's vibe description.
-
-### 2. Map the Color Palette
-For each color provide: **Descriptive Name** + **Hex Code** + **Functional Role**.
-
-**Mandatory constraints:**
-- Maximum 1 accent color. Saturation below 80%
-- The "AI Purple/Blue Neon" aesthetic is strictly BANNED — no purple button glows, no neon gradients
-- Use absolute neutral bases (Zinc/Slate) with high-contrast singular accents
-- Stick to one palette for the entire output — no warm/cool gray fluctuation
-- Never use pure black (`#000000`) — use Off-Black, Zinc-950, or Charcoal
-
-### 3. Establish Typography Rules
-- **Display/Headlines:** Track-tight, controlled scale. Not screaming. Hierarchy through weight and color, not just massive size
-- **Body:** Relaxed leading, max 65 characters per line
-- **Font Selection:** `Inter` is BANNED for premium/creative contexts. Force unique character: `Geist`, `Outfit`, `Cabinet Grotesk`, or `Satoshi`
-- **Serif Ban:** Generic serif fonts (`Times New Roman`, `Georgia`, `Garamond`, `Palatino`) are BANNED. If serif is needed for editorial/creative contexts, use only distinctive modern serifs: `Fraunces`, `Gambarino`, `Editorial New`, or `Instrument Serif`. Serif is always BANNED in dashboards or software UIs
-- **Dashboard Constraint:** Use Sans-Serif pairings exclusively (`Geist` + `Geist Mono` or `Satoshi` + `JetBrains Mono`)
-- **High-Density Override:** When density exceeds 7, all numbers must use Monospace
-
-### 4. Define the Hero Section
-The Hero is the first impression and must be creative, striking, and never generic:
-- **Inline Image Typography:** Embed small, contextual photos or visuals directly between words or letters in the headline. Images sit inline at type-height, rounded, acting as visual punctuation. This is the signature creative technique
-- **No Overlapping:** Text must never overlap images or other text. Every element occupies its own clean spatial zone
-- **No Filler Text:** "Scroll to explore", "Swipe down", scroll arrow icons, bouncing chevrons are BANNED. The content should pull users in naturally
-- **Asymmetric Structure:** Centered Hero layouts BANNED when variance exceeds 4
-- **CTA Restraint:** Maximum one primary CTA. No secondary "Learn more" links
-
-### 5. Describe Component Stylings
-For each component type, describe shape, color, shadow depth, and interaction behavior:
-- **Buttons:** Tactile push feedback on active state. No neon outer glows. No custom mouse cursors
-- **Cards:** Use ONLY when elevation communicates hierarchy. Tint shadows to background hue. For high-density layouts, replace cards with border-top dividers or negative space
-- **Inputs/Forms:** Label above input, helper text optional, error text below. Standard gap spacing
-- **Loading States:** Skeletal loaders matching layout dimensions — no generic circular spinners
-- **Empty States:** Composed compositions indicating how to populate data
-- **Error States:** Clear, inline error reporting
-
-### 6. Define Layout Principles
-- No overlapping elements — every element occupies its own clear spatial zone. No absolute-positioned content stacking
-- Centered Hero sections are BANNED when variance exceeds 4 — force Split Screen, Left-Aligned, or Asymmetric Whitespace
-- The generic "3 equal cards horizontally" feature row is BANNED — use 2-column Zig-Zag, asymmetric grid, or horizontal scroll
-- CSS Grid over Flexbox math — never use `calc()` percentage hacks
-- Contain layouts using max-width constraints (e.g., 1400px centered)
-- Full-height sections must use `min-h-[100dvh]` — never `h-screen` (iOS Safari catastrophic jump)
-
-### 7. Define Responsive Rules
-Every design must work across all viewports:
-- **Mobile-First Collapse (< 768px):** All multi-column layouts collapse to single column. No exceptions
-- **No Horizontal Scroll:** Horizontal overflow on mobile is a critical failure
-- **Typography Scaling:** Headlines scale via `clamp()`. Body text minimum `1rem`/`14px`
-- **Touch Targets:** All interactive elements minimum `44px` tap target
-- **Image Behavior:** Inline typography images (photos between words) stack below headline on mobile
-- **Navigation:** Desktop horizontal nav collapses to clean mobile menu
-- **Spacing:** Vertical section gaps reduce proportionally (`clamp(3rem, 8vw, 6rem)`)
-
-### 8. Encode Motion Philosophy
-- **Spring Physics default:** `stiffness: 100, damping: 20` — premium, weighty feel. No linear easing
-- **Perpetual Micro-Interactions:** Every active component should have an infinite loop state (Pulse, Typewriter, Float, Shimmer)
-- **Staggered Orchestration:** Never mount lists instantly — use cascade delays for waterfall reveals
-- **Performance:** Animate exclusively via `transform` and `opacity`. Never animate `top`, `left`, `width`, `height`. Grain/noise filters on fixed pseudo-elements only
-
-### 9. List Anti-Patterns (AI Tells)
-Encode these as explicit "NEVER DO" rules in the DESIGN.md:
-- No emojis anywhere
-- No `Inter` font
-- No generic serif fonts (`Times New Roman`, `Georgia`, `Garamond`) — distinctive modern serifs only if needed
-- No pure black (`#000000`)
-- No neon/outer glow shadows
-- No oversaturated accents
-- No excessive gradient text on large headers
-- No custom mouse cursors
-- No overlapping elements — clean spatial separation always
-- No 3-column equal card layouts
-- No generic names ("John Doe", "Acme", "Nexus")
-- No fake round numbers (`99.99%`, `50%`)
-- No AI copywriting clichés ("Elevate", "Seamless", "Unleash", "Next-Gen")
-- No filler UI text: "Scroll to explore", "Swipe down", scroll arrows, bouncing chevrons
-- No broken Unsplash links — use `picsum.photos` or SVG avatars
-- No centered Hero sections (for high-variance projects)
-
-## Output Format (DESIGN.md Structure)
-
-```markdown
-# Design System: [Project Title]
-
-## 1. Visual Theme & Atmosphere
-(Evocative description of the mood, density, variance, and motion intensity.
-Example: "A restrained, gallery-airy interface with confident asymmetric layouts
-and fluid spring-physics motion. The atmosphere is clinical yet warm — like a
-well-lit architecture studio.")
-
-## 2. Color Palette & Roles
-- **Canvas White** (#F9FAFB) — Primary background surface
-- **Pure Surface** (#FFFFFF) — Card and container fill
-- **Charcoal Ink** (#18181B) — Primary text, Zinc-950 depth
-- **Muted Steel** (#71717A) — Secondary text, descriptions, metadata
-- **Whisper Border** (rgba(226,232,240,0.5)) — Card borders, 1px structural lines
-- **[Accent Name]** (#XXXXXX) — Single accent for CTAs, active states, focus rings
-(Max 1 accent. Saturation < 80%. No purple/neon.)
-
-## 3. Typography Rules
-- **Display:** [Font Name] — Track-tight, controlled scale, weight-driven hierarchy
-- **Body:** [Font Name] — Relaxed leading, 65ch max-width, neutral secondary color
-- **Mono:** [Font Name] — For code, metadata, timestamps, high-density numbers
-- **Banned:** Inter, generic system fonts for premium contexts. Serif fonts banned in dashboards.
-
-## 4. Component Stylings
-* **Buttons:** Flat, no outer glow. Tactile -1px translate on active. Accent fill for primary, ghost/outline for secondary.
-* **Cards:** Generously rounded corners (2.5rem). Diffused whisper shadow. Used only when elevation serves hierarchy. High-density: replace with border-top dividers.
-* **Inputs:** Label above, error below. Focus ring in accent color. No floating labels.
-* **Loaders:** Skeletal shimmer matching exact layout dimensions. No circular spinners.
-* **Empty States:** Composed, illustrated compositions — not just "No data" text.
-
-## 5. Layout Principles
-(Grid-first responsive architecture. Asymmetric splits for Hero sections.
-Strict single-column collapse below 768px. Max-width containment.
-No flexbox percentage math. Generous internal padding.)
-
-## 6. Motion & Interaction
-(Spring physics for all interactive elements. Staggered cascade reveals.
-Perpetual micro-loops on active dashboard components. Hardware-accelerated
-transforms only. Isolated Client Components for CPU-heavy animations.)
-
-## 7. Anti-Patterns (Banned)
-(Explicit list of forbidden patterns: no emojis, no Inter, no pure black,
-no neon glows, no 3-column equal grids, no AI copywriting clichés,
-no generic placeholder names, no broken image links.)
-```
-
-## Best Practices
-- **Be Descriptive:** "Deep Charcoal Ink (#18181B)" — not just "dark text"
-- **Be Functional:** Explain what each element is used for
-- **Be Consistent:** Same terminology throughout the document
-- **Be Precise:** Include exact hex codes, rem values, pixel values in parentheses
-- **Be Opinionated:** This is not a neutral template — it enforces a specific, premium aesthetic
-
-## Tips for Success
-1. Start with the atmosphere — understand the vibe before detailing tokens
-2. Look for patterns — identify consistent spacing, sizing, and styling
-3. Think semantically — name colors by purpose, not just appearance
-4. Consider hierarchy — document how visual weight communicates importance
-5. Encode the bans — anti-patterns are as important as the rules themselves
-
-## Common Pitfalls to Avoid
-- Using technical jargon without translation ("rounded-xl" instead of "generously rounded corners")
-- Omitting hex codes or using only descriptive names
-- Forgetting functional roles of design elements
-- Being too vague in atmosphere descriptions
-- Ignoring the anti-pattern list — these are what make the output premium
-- Defaulting to generic "safe" designs instead of enforcing the curated aesthetic
 # Purpose
 
-Translate a visual direction into a semantic `DESIGN.md` that Google Stitch can apply consistently across screens.
+Produce a `DESIGN.md` that acts as the single source of truth when prompting Google Stitch. Stitch interprets design through natural-language "visual descriptions" paired with exact values, so the file must be both evocative and precise. The result steers Stitch away from default output (purple gradients, Inter, three equal cards) and toward a system tied to one specific product.
 
 # When to Use
 
-Use when generating or revising a Stitch design system for premium, non-generic web or mobile screens.
+- Starting a new Stitch project and no design system file exists yet.
+- Revising a `DESIGN.md` because generated screens drift or look generic.
+- Translating an existing brand or design system into Stitch's format.
+
+Not for writing production CSS or components; this skill produces the specification Stitch consumes.
 
 # Inputs
 
-Product brief, audience, brand direction, screen inventory, content hierarchy, interaction needs, and platform constraints.
+- Product brief: what it does, who uses it, platform (web or mobile).
+- Brand direction or existing brand tokens, if any.
+- Screen inventory and content hierarchy.
+- Interaction needs (dashboards, marketing, forms, live data).
+- Constraints: accessibility, regulated content, density expectations.
 
 # Outputs
 
-An agent-readable `DESIGN.md` with precise semantic rules for type, color, layout, components, motion, and responsiveness.
+- `DESIGN.md` following `references/design-md-template.md`, with seven sections: atmosphere, color palette and roles, typography, component stylings, layout principles, motion and interaction, anti-patterns.
+- Every color named by role with a hex code; every measurement in rem or px.
 
 # Procedure
 
-Follow the semantic-system, token, component, motion, and anti-generic guidance above while keeping rules specific to the supplied product.
+1. **Define the atmosphere.** Read the brief and set three dials: density (1 gallery-airy to 10 cockpit-dense), variance (1 symmetric to 10 chaotic), motion (1 static to 10 cinematic). Default `4 / 8 / 6`. Write two to four sentences of mood that name those levels.
+2. **Map the palette.** One neutral base family (zinc, slate, or stone), one accent below 80% saturation, off-black for text. Give each color a descriptive name, hex code, and functional role. Ban purple and neon gradients and pure black explicitly.
+3. **Set typography.** Display, body, and mono roles with named fonts. Inter is not the default; prefer faces such as Geist, Outfit, Cabinet Grotesk, or Satoshi. Generic serifs are banned; a distinctive modern serif is allowed only for editorial work with a stated reason, and never in dashboards. When density is 8 or above, all numbers are monospace.
+4. **Describe components.** Buttons (flat, tactile press, no glow), cards (only when elevation means hierarchy; dividers or space in dense layouts), inputs (label above, error below, accent focus ring), loading skeletons, composed empty states, inline errors.
+5. **Define layout and responsive rules.** Grid-first, max-width containment, no overlapping elements, no three-equal-cards rows, asymmetric hero when variance is above 4, dynamic viewport height, single-column collapse below 768px, fluid headline scaling, 44px tap targets, no horizontal scroll.
+6. **Encode motion.** Spring physics with no linear easing, staggered reveals, micro-loops only on live-state components, transform and opacity only, reduced-motion respected.
+7. **List the bans.** Copy the anti-pattern block from the template and add any product-specific tells (for example, "no emoji status labels" for a finance app).
+8. **Fill the template.** Open `references/design-md-template.md`, replace every bracket, keep the section order, and compare against the full example at `DESIGN.md` in this skill folder.
+9. **Review with the checklist below**, then hand the file to Stitch (paste into the project design context or reference it through the Stitch MCP server).
 
 # Quality Checklist
 
-- [ ] Rules are concrete enough for consistent screen generation.
-- [ ] Typography, palette, layout, and motion form one system.
-- [ ] Responsive and accessibility behavior is explicit.
+- [ ] Every color has a name, a hex code, and a role.
+- [ ] Exactly one accent; no purple or neon; no pure black.
+- [ ] Typography names real fonts for display, body, and mono; bans are explicit.
+- [ ] Dial levels are stated in the atmosphere section and match the layout and motion rules.
+- [ ] Layout section states the mobile collapse, tap target size, and no-overlap rule.
+- [ ] Anti-pattern list is present and includes copy tells, not only visual ones.
+- [ ] Developer shorthand is translated into plain descriptive language.
+- [ ] Rules are specific to this product, not a generic list of adjectives.
 
 # Edge Cases
 
-When an existing design system is supplied, map it faithfully instead of layering a conflicting aesthetic on top.
+- **An existing design system is supplied:** map its tokens faithfully. Do not layer a conflicting aesthetic on top; only fill gaps (states, motion, bans) it leaves open.
+- **Dashboard or data-heavy product:** raise density, drop variance to 3-5, sans-serif only, monospace numbers, dividers instead of cards.
+- **Brand insists on purple or a serif:** allow it and write the constraint precisely (exact hex, exact face) so Stitch executes it with intent rather than defaulting to generic gradients.
+- **Mobile app rather than web:** keep the same sections; replace max-width and breakpoint rules with safe-area, thumb-zone, and platform navigation notes.
+- **Brief is vague on mood:** ask one question about the closest reference product before writing the atmosphere.
 
 # Safety Rules
 
-Do not include private project data, unlicensed assets, or invented product content in the shared design specification.
+- Do not include private project data, internal URLs, or client names in the shared specification.
+- Do not reference unlicensed fonts or assets as requirements; name licensed or open alternatives.
+- Do not invent product content, metrics, or testimonials inside `DESIGN.md`.
+- Do not present a generic template as finished work; every bracket must be replaced.
 
 # Examples
 
-**Good:** A semantic system tied to one product's actual hierarchy and behaviors. **Bad:** A list of fashionable adjectives with no implementable values.
+**Good:** A `DESIGN.md` for a field-service scheduling app: "Cockpit-leaning density (7), moderate variance (5), quiet motion (3). Canvas Slate (#F8FAFC), Graphite Ink (#0F172A), single Signal Amber accent (#D97706) for the current job. Geist for display and body, Geist Mono for every time and distance value. No cards; jobs separate with 1px Whisper Borders."
+
+**Bad:** "Modern, clean, premium feel with a nice dark theme and some accent colors." No hex codes, no fonts, no bans, nothing Stitch can apply consistently.
