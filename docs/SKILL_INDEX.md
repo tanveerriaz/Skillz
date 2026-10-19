@@ -1,6 +1,6 @@
 # Skill Index
 
-49 skills across 14 categories. Each skill lives in `skills/<name>/SKILL.md` and is compatible with Claude Code, Codex, Cursor, GitHub Copilot / VS Code, and Antigravity.
+52 skills across 14 categories. Each skill lives in `skills/<name>/SKILL.md` and is compatible with Claude Code, Codex, Cursor, GitHub Copilot / VS Code, and Antigravity.
 
 ## ai-agent-workflows
 
@@ -61,6 +61,9 @@
 
 ## frontend
 
+- **hyperframes-core** — Author deterministic HyperFrames composition HTML with explicit clip timing and optional video rendering. _Use for the composition contract and runtime validation; Apache-2.0 text edition._
+- **hyperframes-creative** — Choose deliberate palettes, type, hierarchy, and scene rhythm for animated HTML. _Use for visual direction; Apache-2.0 text edition._
+- **hyperframes-animation** — Compose GSAP timelines, staggered text, SVG reveals, and tactile reactions. _Use for browser HTML motion or seekable video animation; Apache-2.0 text edition._
 - **safe-ui-enhancement** — Restyle UI without breaking JS/auth hooks; read the brand reference; verify responsive + accessibility. _Use when improving an existing interface._
 - **brandkit** — Create coherent premium brand boards, logo systems, identity decks, and visual-world presentations. _Use for image-led brand-system work._
 - **cinematic-minimal-web** — Build restrained presentation-style websites with editorial typography and purposeful motion. _Use for premium landing pages and portfolios._

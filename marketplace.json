@@ -612,6 +612,90 @@
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-09-02"
+    },
+    {
+      "name": "hyperframes-core",
+      "description": "Use when authoring HyperFrames HTML compositions for optional video rendering. Covers data attributes, clip timing, sub-compositions, variables, media, and deterministic seekable timelines.",
+      "path": "skills/hyperframes-core",
+      "category": "frontend",
+      "source_projects": [
+        "heygen-com/hyperframes"
+      ],
+      "tags": [
+        "html",
+        "animation",
+        "video",
+        "hyperframes"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-10-19",
+      "license": "Apache-2.0",
+      "source_commit": "cea0bad7931122bd93680006978c0d9007daa3d4"
+    },
+    {
+      "name": "hyperframes-creative",
+      "description": "Use when choosing visual direction for animated HTML or HTML video compositions. Guides subject-specific palettes, typography, frame hierarchy, layers, readable scale, and scene rhythm.",
+      "path": "skills/hyperframes-creative",
+      "category": "frontend",
+      "source_projects": [
+        "heygen-com/hyperframes"
+      ],
+      "tags": [
+        "html",
+        "animation",
+        "video",
+        "hyperframes"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-10-19",
+      "license": "Apache-2.0",
+      "source_commit": "cea0bad7931122bd93680006978c0d9007daa3d4"
+    },
+    {
+      "name": "hyperframes-animation",
+      "description": "Use when animating HTML with GSAP or authoring seekable HyperFrames video motion. Includes timeline sequencing, easing, stagger, transforms, SVG path drawing, waterfall text entries, and tactile press reactions.",
+      "path": "skills/hyperframes-animation",
+      "category": "frontend",
+      "source_projects": [
+        "heygen-com/hyperframes"
+      ],
+      "tags": [
+        "html",
+        "animation",
+        "video",
+        "hyperframes"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-10-19",
+      "license": "Apache-2.0",
+      "source_commit": "cea0bad7931122bd93680006978c0d9007daa3d4"
     }
   ]
 }

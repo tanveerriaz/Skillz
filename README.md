@@ -92,6 +92,14 @@ Load the skill folders into your skills/instructions directory and reference the
 
 > Tip: the `agent-memory-file` skill explains how to wire durable project context into any of these tools.
 
+### HyperFrames animated HTML skills
+
+The curated [creative](skills/hyperframes-creative/SKILL.md), [animation](skills/hyperframes-animation/SKILL.md), and [composition core](skills/hyperframes-core/SKILL.md) skills are text-only adaptations of official HeyGen HyperFrames, pinned to `cea0bad7931122bd93680006978c0d9007daa3d4`. Copy the complete skill folders or reference their entrypoints; no runtime or global installation is needed to read the guidance.
+
+Try: "Use hyperframes-creative and hyperframes-animation to design an animated HTML product introduction. Deliver browser HTML with reduced-motion support." Browser playback needs your own approved GSAP dependency and explicit timeline playback. Optional video export needs the separate HyperFrames runtime, Node.js 22+, Chrome, and FFmpeg; see each skill's `UPSTREAM.md` for scope and use instructions.
+
+These three skill directories are **Apache-2.0**, with their own `LICENSE` and provenance files, as exceptions to the root MIT license. They contain no framework package, executable helpers, fonts, media, or private project material.
+
 ## Skill categories
 
 | Category | Focus |
