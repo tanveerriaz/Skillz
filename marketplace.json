@@ -6,7 +6,7 @@
   "version": "0.2.0",
   "spec": "https://agentskills.io/specification",
   "repository": "https://github.com/tanveerriaz/Skillz",
-  "last_updated": "2026-09-02",
+  "last_updated": "2026-11-06",
   "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
   "categories": [
     "ai-agent-workflows",
@@ -696,6 +696,34 @@
       "last_updated": "2026-10-19",
       "license": "Apache-2.0",
       "source_commit": "cea0bad7931122bd93680006978c0d9007daa3d4"
+    },
+    {
+      "name": "create-sourced-newspaper",
+      "description": "Create an attributed, responsive HTML newspaper from HTML, Excel, email, Teams, transcripts and permitted public sources, with an offline renderer and synthetic fixtures.",
+      "path": "skills/create-sourced-newspaper",
+      "category": "documentation",
+      "source_projects": [
+        "source-backed-editorial-workflow"
+      ],
+      "tags": [
+        "newspaper",
+        "editorial",
+        "source-attribution",
+        "responsive-html",
+        "copilot"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity",
+        "microsoft-365-copilot"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-11-06"
     }
   ]
 }

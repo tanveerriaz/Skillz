@@ -1,0 +1,8 @@
+SYNTHETIC FIXTURE. All speakers, roles and statements are fictional.
+Meeting: Programme Meridian readiness review
+Meeting date: 2026-11-06T08:30:00Z
+Transcript produced: 2026-11-06T09:30:00Z
+[00:42] Demo operations lead: I will complete the rollback walkthrough by 9 November and bring the evidence to the review.
+[01:35] Demo control owner: The access review remains open. I will finish the evidence pack by 9 November.
+[02:10] Demo facilitator: The week of 16 November was discussed as a possible release window. It is a proposal, not an approved date.
+[02:45] Demo programme lead: We will review the two checks on 10 November before making a release decision.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sourced Newspaper"
+  short_description: "Create source-backed interactive HTML newspapers"
+  default_prompt: "Use $create-sourced-newspaper to turn my files and authorized messages into an attributed HTML newspaper."

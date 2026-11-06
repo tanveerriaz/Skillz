@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "team": "Fictional Programme Meridian",
+  "channel": "Release coordination",
+  "thread_id": "demo-thread-17",
+  "messages": [
+    {"id":"T-104","author":"Demo delivery analyst","timestamp":"2026-11-06T09:15:00Z","text":"The current workbook contains 100 checks. That is the scope, not a claim that all checks are complete."},
+    {"id":"T-105","author":"Demo workstream coordinator","timestamp":"2026-11-06T09:22:00Z","text":"Please use the 09:00 UTC Portfolio snapshot. It records 84 completed checks out of 100. The other 16 are not yet complete; they are not all blockers."}
+  ]
+}

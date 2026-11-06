@@ -1,6 +1,6 @@
 # Skill Index
 
-52 skills across 14 categories. Each skill lives in `skills/<name>/SKILL.md` and is compatible with Claude Code, Codex, Cursor, GitHub Copilot / VS Code, and Antigravity.
+53 skills across 14 categories. Each skill lives in `skills/<name>/SKILL.md` and is compatible with Claude Code, Codex, Cursor, GitHub Copilot / VS Code, and Antigravity.
 
 ## ai-agent-workflows
 
@@ -37,6 +37,8 @@
 - **railway-deployment-check** — Verify runtime files, env vars, and start command for managed platforms; favor auto-detection; plan rollback. _Use before/while deploying to Railway, Render, or Fly.io._
 
 ## documentation
+
+- **[create-sourced-newspaper](../skills/create-sourced-newspaper/SKILL.md)** — Turn mixed sources into an attributed, responsive HTML newspaper with an offline renderer, synthetic fixtures and Copilot setup guidance. _Use for evidence-backed editorial briefings; Microsoft 365 support depends on tenant capabilities._
 
 - **change-log-release-notes** — Daily change journal + release notes derived only from the logs. _Use throughout dev and at release time._
 - **docs-organization** — Keep docs in one categorized `/docs` tree; keep the root minimal. _Use when creating or moving docs._

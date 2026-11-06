@@ -1,0 +1,283 @@
+{
+  "title": "The Programme Post",
+  "strapline": "An evidence-led view of delivery, decisions and the people moving work forward.",
+  "edition": "No. 001 · Demonstration edition",
+  "date": "2026-11-06",
+  "as_of": "2026-11-06T09:45:00Z",
+  "audience": "For demonstration only",
+  "sample": true,
+  "intro": "A newspaper should make the important things easy to find, and the evidence easy to follow. This fictional edition shows the format using five different source types.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "html",
+      "title": "Rehearsal update",
+      "locator": "assets/demo-sources/demo-update.html · sections #rehearsal and #handover",
+      "published_at": "2026-11-06T09:00:00Z",
+      "excerpt": "The operational rehearsal is complete. Six runbooks were reviewed. These are rehearsal results, not release authorization.",
+      "access": "demo",
+      "retrieved_at": "2026-11-06T09:45:00Z",
+      "note": "Fictional, locally bundled demonstration material. The timestamps belong to the synthetic scenario, not a live retrieval. No real bank data was used."
+    },
+    {
+      "id": "S2",
+      "type": "excel",
+      "title": "Portfolio snapshot",
+      "locator": "assets/demo-sources/demo-portfolio.xlsx · Portfolio!A4:D10 and B12",
+      "published_at": "2026-11-06T09:00:00Z",
+      "access": "demo",
+      "retrieved_at": "2026-11-06T09:45:00Z",
+      "note": "Fictional, locally bundled demonstration material. The timestamps belong to the synthetic scenario, not a live retrieval. No real bank data was used. Excerpt is a formatted transcription of the table, not a direct quotation. B10=SUM(B5:B9)=84; C10=SUM(C5:C9)=100; B12=B10/C10=84%."
+    },
+    {
+      "id": "S3",
+      "type": "email",
+      "title": "Decision note",
+      "locator": "assets/demo-sources/demo-decision.eml · Message-ID demo-decision-001@example.invalid · body",
+      "published_at": "2026-11-06T09:10:00Z",
+      "excerpt": "The rehearsal is complete, but release approval has not been granted.\nTwo checks remain open: rollback evidence and the access review.",
+      "access": "demo",
+      "retrieved_at": "2026-11-06T09:45:00Z",
+      "note": "Fictional, locally bundled demonstration material. The timestamps belong to the synthetic scenario, not a live retrieval. No real bank data was used."
+    },
+    {
+      "id": "S4",
+      "type": "teams",
+      "title": "Scope clarification",
+      "locator": "assets/demo-sources/demo-teams.json · thread demo-thread-17 · messages T-104 and T-105",
+      "published_at": "2026-11-06T09:22:00Z",
+      "excerpt": "It records 84 completed checks out of 100. The other 16 are not yet complete; they are not all blockers.",
+      "access": "demo",
+      "retrieved_at": "2026-11-06T09:45:00Z",
+      "note": "Fictional, locally bundled demonstration material. The timestamps belong to the synthetic scenario, not a live retrieval. No real bank data was used."
+    },
+    {
+      "id": "S5",
+      "type": "transcript",
+      "title": "Readiness review",
+      "locator": "assets/demo-sources/demo-meeting.txt · meeting 08:30 UTC · 00:42–02:45",
+      "published_at": "2026-11-06T09:30:00Z",
+      "excerpt": "The week of 16 November was discussed as a possible release window. It is a proposal, not an approved date.",
+      "access": "demo",
+      "retrieved_at": "2026-11-06T09:45:00Z",
+      "note": "Fictional, locally bundled demonstration material. The timestamps belong to the synthetic scenario, not a live retrieval. No real bank data was used."
+    }
+  ],
+  "articles": [
+    {
+      "id": "lead",
+      "section": "Delivery",
+      "title": "Rehearsal complete; release decision awaits two checks",
+      "dek": "The fictional Meridian programme has finished its rehearsal. Rollback evidence and an access review still stand between progress and a release decision.",
+      "label": "Illustrative story",
+      "paragraphs": [
+        {
+          "text": "The operational rehearsal is complete and six runbooks have been reviewed, according to the demonstration update. The same update explicitly separates rehearsal results from release authorization.",
+          "source_ids": [
+            "S1"
+          ]
+        },
+        {
+          "text": "The programme lead’s fictional decision note says approval has not been granted. It identifies rollback evidence and the access review as the two remaining checks, with evidence to be considered on 10 November.",
+          "source_ids": [
+            "S3"
+          ]
+        },
+        {
+          "text": "The delivery snapshot records 84 completed checks out of 100. That is a completion measure for the listed workstreams, not a release-readiness score or a statement that all controls have passed.",
+          "source_ids": [
+            "S2",
+            "S3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scope",
+      "section": "Delivery",
+      "title": "One shared denominator brings the picture into focus",
+      "dek": "The demo workbook and chat agree on 84 completed checks. The remaining 16 are not automatically 16 blockers.",
+      "label": "Illustrative story",
+      "paragraphs": [
+        {
+          "text": "A clarification in the fictional Teams thread identifies 100 as the scope of the current snapshot, not the number completed. The workbook reconciles to 84 completed checks across five workstreams.",
+          "source_ids": [
+            "S4",
+            "S2"
+          ]
+        },
+        {
+          "text": "Client onboarding shows 14 of 20 checks complete, while data controls shows 16 of 20. The workbook labels both “Watch”; it does not provide evidence for a change in delivery date.",
+          "source_ids": [
+            "S2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decision",
+      "section": "Decisions",
+      "title": "A proposed window is not an approved date",
+      "dek": "The transcript preserves an important distinction between a planning discussion and a commitment.",
+      "label": "Illustrative story",
+      "paragraphs": [
+        {
+          "text": "In the synthetic readiness review, the facilitator describes the week of 16 November as a possible release window. The speaker explicitly calls it a proposal.",
+          "source_ids": [
+            "S5"
+          ]
+        },
+        {
+          "text": "The decision note says no production release date has been committed. The next review is due on 10 November, after the remaining evidence is considered.",
+          "source_ids": [
+            "S3",
+            "S5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "owners",
+      "section": "People",
+      "title": "Two owners, one clear evidence deadline",
+      "dek": "The demonstration transcript records specific follow-ups without inventing new commitments.",
+      "label": "Illustrative story",
+      "paragraphs": [
+        {
+          "text": "The operations lead takes responsibility for the rollback walkthrough by 9 November. The control owner separately undertakes to finish the access-review evidence pack by the same date.",
+          "source_ids": [
+            "S5"
+          ]
+        },
+        {
+          "text": "These are role labels from a fictional transcript, not identified employees. The actions shown below retain their stated owners and dates.",
+          "source_ids": [
+            "S5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "handover",
+      "section": "Delivery",
+      "title": "Six runbooks give the handover a common reference",
+      "dek": "A small operational detail can carry more value than a broad statement of confidence.",
+      "label": "Illustrative story",
+      "paragraphs": [
+        {
+          "text": "The demo update reports six reviewed runbooks and a shared index for the delivery team. It says each runbook has a role owner in the fictional scenario.",
+          "source_ids": [
+            "S1"
+          ]
+        },
+        {
+          "text": "Reviewing the runbooks is one recorded preparation step. The decision email still requires the two outstanding checks before a release decision.",
+          "source_ids": [
+            "S1",
+            "S3"
+          ]
+        }
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "label": "Checks complete",
+      "value": 84,
+      "unit": "/ 100",
+      "method": "Portfolio!B10 / C10. Snapshot totals, not release approval.",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "label": "Runbooks reviewed",
+      "value": 6,
+      "unit": "",
+      "method": "Rehearsal update, section “Rehearsal”.",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "label": "Decision checks open",
+      "value": 2,
+      "unit": "",
+      "method": "Rollback evidence and access review in the decision note.",
+      "source_ids": [
+        "S3"
+      ]
+    }
+  ],
+  "portfolio": {
+    "title": "Completion, without the guesswork.",
+    "caption": "Completed checks / checks in scope. Same 09:00 UTC snapshot for every workstream; all figures are synthetic.",
+    "rows": [
+      {
+        "label": "Digital channels",
+        "complete": 18,
+        "total": 20
+      },
+      {
+        "label": "Client onboarding",
+        "complete": 14,
+        "total": 20
+      },
+      {
+        "label": "Payments",
+        "complete": 18,
+        "total": 20
+      },
+      {
+        "label": "Data controls",
+        "complete": 16,
+        "total": 20
+      },
+      {
+        "label": "Reporting",
+        "complete": 18,
+        "total": 20
+      }
+    ],
+    "source_ids": [
+      "S2"
+    ]
+  },
+  "actions": [
+    {
+      "text": "Complete the rollback walkthrough and bring the evidence.",
+      "owner": "Demo operations lead",
+      "due": "By 9 November 2026",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "text": "Finish the access-review evidence pack.",
+      "owner": "Demo control owner",
+      "due": "By 9 November 2026",
+      "source_ids": [
+        "S5"
+      ]
+    },
+    {
+      "text": "Review both checks before making a release decision.",
+      "owner": "Demo programme lead",
+      "due": "10 November 2026",
+      "source_ids": [
+        "S3",
+        "S5"
+      ]
+    }
+  ],
+  "limitations": [
+    "All stories, numbers, dates, names of programmes and role labels are fictional. No email, Teams conversation or bank system was accessed to create this demonstration.",
+    "No public news was imported. A real edition should read and cite freely accessible first-party sources rather than invent a current headline.",
+    "The HTML is an offline snapshot. Source popovers explain attribution; they do not grant access to private originals or refresh the reporting."
+  ],
+  "theme": {
+    "navy": "#071F4B",
+    "blue": "#006EAA",
+    "green": "#007C42"
+  }
+}
