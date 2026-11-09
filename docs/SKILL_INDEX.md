@@ -1,6 +1,6 @@
 # Skill Index
 
-52 skills across 14 categories. Each skill lives in `skills/<name>/SKILL.md` and is compatible with Claude Code, Codex, Cursor, GitHub Copilot / VS Code, and Antigravity.
+61 skills across 15 categories. Each skill lives in `skills/<name>/SKILL.md` and is compatible with Claude Code, Codex, Cursor, GitHub Copilot / VS Code, and Antigravity.
 
 ## ai-agent-workflows
 
@@ -96,6 +96,19 @@
 
 - **founder-validation-loop** — Hypothesis → cheapest test → signal → decide → capture, turning experiments into reusable assets. _Use when running experiments or extracting reusable wins._
 
+## video
+
+- **agentic-motion-graphics** — Turn a reference video, article, or brief into a word-synced HTML/GSAP video with voiceover, rendered through HyperFrames. _Use when the voiceover must drive the visuals word by word._
+- **claude-remotion-skill** — Teach an agent the motion-design craft rules for professional Remotion videos, with a mandatory render-inspect-fix loop. _Use when standardising on Remotion and wanting the craft discipline layer._
+- **huashu-motion** — Make a 30-second product launch film from a one-line brief, with an original composed score and a click-to-fix editor. _Use for a 30-second launch film with original composed music._
+- **motion-skill** — Create 60fps motion-graphic explainers and speech-synced B-roll, and isolate subjects from video locally with SAM 2. _Use for the smoothest 60fps motion or cutting a subject out of footage locally._
+- **motion-studio** — Type one prompt, get a finished motion-graphics video with storyboard, voiceover, and a loudness-normalised mix. _Use when one prompt should produce a finished motion-graphics video._
+- **motion-video** — Make narrated 9:16 motion-graphic explainers in one of 11 distinct visual styles, voiceover-first, with zero paid APIs. _Use for narrated 9:16 explainers where every video needs a different look._
+- **motion-video-director** — Turn a coding agent into a video production team that plans, animates, edits real footage, voices, and sound-designs complete videos. _Use when one skill must handle both code-drawn graphics and real footage._
+- **openmontage** — Turn an AI coding assistant into a video production studio across 12 pipelines, with cost estimates and a budget cap. _Use when one skill is not enough and the job needs a costed full production._
+- **video-shotcraft** — Make a cinematic product promo from your real screenshots, storyboarded from 124 shot recipes and animated in Remotion. _Use for a cinematic promo built from your real product screenshots._
+
 ## Compatibility notes
 
 All skills use the universal `SKILL.md` format and are tool-agnostic. Skills that ship a `scripts/` helper (e.g. `public-repo-safety-scan`) assume a POSIX shell with Git. Skills that ship `templates/` or `examples/` (change-log, secure-env-setup, llm-eval-golden-set) are starting points to copy and adapt.
+

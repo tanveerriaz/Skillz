@@ -100,6 +100,10 @@ Try: "Use hyperframes-creative and hyperframes-animation to design an animated H
 
 These three skill directories are **Apache-2.0**, with their own `LICENSE` and provenance files, as exceptions to the root MIT license. They contain no framework package, executable helpers, fonts, media, or private project material.
 
+### Animated video
+
+HyperFrames was already in the repo (see above). Nine more video skills join it in the new `video` category: [motion-studio](skills/motion-studio/SKILL.md) turns one prompt into a finished motion-graphics video; [agentic-motion-graphics](skills/agentic-motion-graphics/SKILL.md) runs the full producer pipeline with word-level voiceover alignment (licence not stated — draft); [huashu-motion](skills/huashu-motion/SKILL.md) makes a 30-second launch film with an original composed score; [video-shotcraft](skills/video-shotcraft/SKILL.md) builds cinematic promos from your real screenshots in Remotion; [openmontage](skills/openmontage/SKILL.md) is a whole production studio across 12 pipelines with a budget cap (AGPL-3.0); [claude-remotion-skill](skills/claude-remotion-skill/SKILL.md) teaches the motion-design craft rules for Remotion; [motion-video-director](skills/motion-video-director/SKILL.md) is a full production team that also edits real footage (licence not stated — draft); [motion-skill](skills/motion-skill/SKILL.md) makes 60fps explainers and isolates subjects locally with SAM 2; and [motion-video](skills/motion-video/SKILL.md) makes narrated 9:16 explainers in 11 distinct styles with zero paid APIs. Each skill's `UPSTREAM.md` gives the source repo, licence, and install steps.
+
 ## Skill categories
 
 | Category | Focus |
@@ -115,6 +119,7 @@ These three skill directories are **Apache-2.0**, with their own `LICENSE` and p
 | `banking-domain` | Generalized, public-safe enterprise delivery patterns |
 | `devops` | Git workflows, release hygiene, repo readiness |
 | `frontend` | Responsive, on-brand, accessible UI changes |
+| `video` | Animated video production: motion graphics, launch films, promos, and full production pipelines |
 | `backend` | APIs, validation, service patterns |
 | `data` | Schema design, RLS, resilient batch processing |
 | `founder-ops` | Turning experiments into reusable assets and systems |
@@ -194,3 +199,4 @@ Skillz — Reusable AI-agent skills for builders who ship.
 Curious mind. Builder mode! 🇸🇬
 
 </div>
+
