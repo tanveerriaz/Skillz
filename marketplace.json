@@ -3,11 +3,18 @@
   "author": "Tanveer Riaz",
   "tagline": "Reusable AI-agent skills for builders who ship.",
   "description": "A public marketplace of practical Agent Skills that help AI coding agents move from prompt chaos to repeatable execution across coding, debugging, architecture, security, deployment, documentation, product, and enterprise delivery.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "spec": "https://agentskills.io/specification",
   "repository": "https://github.com/tanveerriaz/Skillz",
-  "last_updated": "2026-09-02",
-  "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+  "last_updated": "2026-11-09",
+  "compatibility": [
+    "claude-code",
+    "codex",
+    "cursor",
+    "github-copilot",
+    "vscode",
+    "antigravity"
+  ],
   "categories": [
     "ai-agent-workflows",
     "coding",
@@ -22,7 +29,8 @@
     "frontend",
     "backend",
     "data",
-    "founder-ops"
+    "founder-ops",
+    "video"
   ],
   "skills": [
     {
@@ -30,9 +38,24 @@
       "description": "Discovery-first workflow for changing existing code: search before writing, analyze impact in plain language, gate risky changes behind approval, then execute in small commits.",
       "path": "skills/agent-change-workflow",
       "category": "ai-agent-workflows",
-      "source_projects": ["ai-agent-project", "saas-web-app-project"],
-      "tags": ["workflow", "discovery", "approval-gate", "refactor"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "ai-agent-project",
+        "saas-web-app-project"
+      ],
+      "tags": [
+        "workflow",
+        "discovery",
+        "approval-gate",
+        "refactor"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-06-03"
@@ -42,9 +65,23 @@
       "description": "Produce a self-contained handoff note so the next agent or person can resume work without re-reading the codebase.",
       "path": "skills/agent-handoff",
       "category": "ai-agent-workflows",
-      "source_projects": ["ai-agent-project", "documentation-workflow"],
-      "tags": ["handoff", "context", "continuity"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "ai-agent-project",
+        "documentation-workflow"
+      ],
+      "tags": [
+        "handoff",
+        "context",
+        "continuity"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-06-03"
@@ -54,21 +91,75 @@
       "description": "Set up and maintain a project's AI-agent memory file (CLAUDE.md, AGENTS.md, .cursorrules) with durable, concise, secret-free project context.",
       "path": "skills/agent-memory-file",
       "category": "ai-agent-workflows",
-      "source_projects": ["ai-agent-project"],
-      "tags": ["memory", "context", "conventions"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "ai-agent-project"
+      ],
+      "tags": [
+        "memory",
+        "context",
+        "conventions"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-06-03"
+    },
+    {
+      "name": "agentic-motion-graphics",
+      "description": "Turn a reference video, article, or brief into a word-synced HTML/GSAP motion-graphics video with voiceover, rendered to MP4 through HyperFrames.",
+      "path": "skills/agentic-motion-graphics",
+      "category": "video",
+      "source_projects": [
+        "siyuanfeng636-cpu/agentic-motion-graphics"
+      ],
+      "tags": [
+        "video",
+        "motion-graphics",
+        "producer-pipeline",
+        "whisper",
+        "hyperframes"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "draft",
+      "public_safe": true,
+      "last_updated": "2026-11-09"
     },
     {
       "name": "ai-code-review",
       "description": "Review a change for correctness, security, performance, and maintainability with severity-tagged findings and concrete fixes.",
       "path": "skills/ai-code-review",
       "category": "coding",
-      "source_projects": ["saas-web-app-project", "backend-api-project"],
-      "tags": ["review", "security", "quality"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "saas-web-app-project",
+        "backend-api-project"
+      ],
+      "tags": [
+        "review",
+        "security",
+        "quality"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-06-03"
@@ -78,261 +169,24 @@
       "description": "Clean backend layering: thin route handler, service layer, repository for data access, with validation, consistent errors, and dependency injection.",
       "path": "skills/api-service-pattern",
       "category": "backend",
-      "source_projects": ["backend-api-project", "saas-web-app-project"],
-      "tags": ["api", "layering", "repository", "validation"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "bug-root-cause-analysis",
-      "description": "Disciplined reproduce -> isolate -> diagnose -> fix -> validate loop so the real cause is fixed and the fix is proven before closing.",
-      "path": "skills/bug-root-cause-analysis",
-      "category": "debugging",
-      "source_projects": ["saas-web-app-project", "ai-agent-project"],
-      "tags": ["debugging", "root-cause", "validation"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "change-log-release-notes",
-      "description": "Maintain a daily change journal during development and generate user-readable release notes derived only from those logs.",
-      "path": "skills/change-log-release-notes",
-      "category": "documentation",
-      "source_projects": ["documentation-workflow", "deployment-workflow"],
-      "tags": ["changelog", "release-notes", "audit"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "docs-organization",
-      "description": "Keep all documentation in a single categorized /docs tree, prevent stray markdown and SQL files, and keep the project root minimal.",
-      "path": "skills/docs-organization",
-      "category": "documentation",
-      "source_projects": ["documentation-workflow"],
-      "tags": ["docs", "structure", "hygiene"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "enterprise-delivery-tracker",
-      "description": "Generalized, organization-agnostic structure for multi-team programme delivery: intake, prioritization, RAID, status reports, and governance updates.",
-      "path": "skills/enterprise-delivery-tracker",
-      "category": "banking-domain",
-      "source_projects": ["enterprise-delivery-workflow"],
-      "tags": ["governance", "raid", "psr", "delivery"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "founder-validation-loop",
-      "description": "Turn experiments into validated, reusable assets via a tight hypothesis -> cheapest test -> signal -> decide -> capture loop.",
-      "path": "skills/founder-validation-loop",
-      "category": "founder-ops",
-      "source_projects": ["founder-ops-workflow"],
-      "tags": ["validation", "experiment", "reuse"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "git-release-hygiene",
-      "description": "Safe Git workflow: working-branch-only policy, conventional commits, and an explicit-approval gate before any merge to main or production deploy.",
-      "path": "skills/git-release-hygiene",
-      "category": "devops",
-      "source_projects": ["deployment-workflow", "saas-web-app-project"],
-      "tags": ["git", "branches", "commits", "release"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "input-validation-prompt-safety",
-      "description": "Validate external input before use, allowlist commands and senders, and harden LLM prompts against injection so untrusted input cannot break logic or hijack an agent.",
-      "path": "skills/input-validation-prompt-safety",
-      "category": "security",
-      "source_projects": ["backend-api-project", "ai-agent-project"],
-      "tags": ["validation", "prompt-injection", "security"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "lean-project-structure",
-      "description": "Scaffold or untangle a project into a lean, single-responsibility layout with clear layer boundaries and a no-unnecessary-files rule.",
-      "path": "skills/lean-project-structure",
-      "category": "architecture",
-      "source_projects": ["saas-web-app-project", "backend-api-project"],
-      "tags": ["structure", "maintainability", "layering"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "llm-eval-golden-set",
-      "description": "Build a small golden set of inputs with expected qualities and a repeatable eval script to measure LLM-feature quality and catch regressions.",
-      "path": "skills/llm-eval-golden-set",
-      "category": "ai-agent-workflows",
-      "source_projects": ["ai-agent-project"],
-      "tags": ["eval", "testing", "quality", "regression"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "llm-prompt-design",
-      "description": "Centralize LLM prompts, separate role/tone from structure from per-call context, and apply anti-AI-slop rules for human-sounding, maintainable output.",
-      "path": "skills/llm-prompt-design",
-      "category": "ai-agent-workflows",
-      "source_projects": ["ai-agent-project", "saas-web-app-project"],
-      "tags": ["prompts", "tone", "humanizer"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "local-first-ai-automation",
-      "description": "Build personal automations on a local LLM and browser automation with allowlisted triggers, no destructive actions, and graceful timeouts.",
-      "path": "skills/local-first-ai-automation",
-      "category": "ai-agent-workflows",
-      "source_projects": ["ai-agent-project"],
-      "tags": ["local", "automation", "safety", "ollama"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "prd-to-build-plan",
-      "description": "Convert a product idea or PRD into a phased, buildable plan with goals, non-goals, scope, milestones, and acceptance criteria.",
-      "path": "skills/prd-to-build-plan",
-      "category": "documentation",
-      "source_projects": ["documentation-workflow", "founder-ops-workflow"],
-      "tags": ["prd", "planning", "scope"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "public-repo-safety-scan",
-      "description": "Scan staged changes and the working tree for secrets, private URLs, internal IPs, personal data, and client references before a repo goes public.",
-      "path": "skills/public-repo-safety-scan",
-      "category": "security",
-      "source_projects": ["founder-ops-workflow", "deployment-workflow"],
-      "tags": ["secrets", "privacy", "public-safe"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "railway-deployment-check",
-      "description": "Verify runtime files, env vars, and start command for managed-platform deploys (Railway, Render, Fly.io), favor auto-detection, and plan rollback.",
-      "path": "skills/railway-deployment-check",
-      "category": "deployment",
-      "source_projects": ["deployment-workflow", "saas-web-app-project"],
-      "tags": ["deploy", "railway", "paas", "rollback"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "repo-readiness-review",
-      "description": "Run a readiness pass over a repo (safety, structure, docs, dependencies, runnability) and return a go / fix-first verdict with a prioritized punch list.",
-      "path": "skills/repo-readiness-review",
-      "category": "devops",
-      "source_projects": ["deployment-workflow", "founder-ops-workflow"],
-      "tags": ["readiness", "handoff", "audit"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "resilient-batch-processing",
-      "description": "Process many files or records so one bad item never stops the run: isolate failures, log with identifiers, clean up temp files, and summarize results and errors.",
-      "path": "skills/resilient-batch-processing",
-      "category": "data",
-      "source_projects": ["analytics-dashboard-project", "backend-api-project"],
-      "tags": ["batch", "resilience", "imports", "ocr"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "saas-mvp-planner",
-      "description": "Shape a SaaS idea into a buildable MVP: one core user, one problem, the smallest valuable solution, a happy-path journey, and an explicit not-now list.",
-      "path": "skills/saas-mvp-planner",
-      "category": "product",
-      "source_projects": ["saas-web-app-project", "founder-ops-workflow"],
-      "tags": ["mvp", "scope", "product"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "safe-ui-enhancement",
-      "description": "Restyle an existing UI without breaking it: read the brand reference, map JS/auth hooks, propose changes before editing, and verify responsive + accessibility.",
-      "path": "skills/safe-ui-enhancement",
-      "category": "frontend",
-      "source_projects": ["frontend-ui-project", "saas-web-app-project"],
-      "tags": ["ui", "brand", "responsive", "accessibility"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "secure-env-setup",
-      "description": "Environment-variable-driven config with a placeholder-only .env.example and startup validation, so no secret is ever hardcoded or committed.",
-      "path": "skills/secure-env-setup",
-      "category": "security",
-      "source_projects": ["deployment-workflow", "backend-api-project"],
-      "tags": ["env", "secrets", "config"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "supabase-data-design",
-      "description": "Design Postgres/Supabase-style schemas with consistent naming, row-level security by default, sensible indexes, and a clear tables-vs-JSON decision.",
-      "path": "skills/supabase-data-design",
-      "category": "data",
-      "source_projects": ["backend-api-project", "analytics-dashboard-project"],
-      "tags": ["database", "supabase", "rls", "schema"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-06-03"
-    },
-    {
-      "name": "think-before-coding",
-      "description": "Evaluate at least three distinct solution approaches with brief trade-offs before implementing, so the chosen design fits the existing codebase.",
-      "path": "skills/think-before-coding",
-      "category": "coding",
-      "source_projects": ["ai-agent-project", "saas-web-app-project"],
-      "tags": ["planning", "design", "trade-offs"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "backend-api-project",
+        "saas-web-app-project"
+      ],
+      "tags": [
+        "api",
+        "layering",
+        "repository",
+        "validation"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-06-03"
@@ -342,45 +196,152 @@
       "description": "Create premium brand-guideline boards, logo systems, identity decks, and visual-world presentations as one coherent system.",
       "path": "skills/brandkit",
       "category": "frontend",
-      "source_projects": ["local-skill-library"],
-      "tags": ["branding", "identity", "image-generation"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "branding",
+        "identity",
+        "image-generation"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-09-02"
+    },
+    {
+      "name": "bug-root-cause-analysis",
+      "description": "Disciplined reproduce -> isolate -> diagnose -> fix -> validate loop so the real cause is fixed and the fix is proven before closing.",
+      "path": "skills/bug-root-cause-analysis",
+      "category": "debugging",
+      "source_projects": [
+        "saas-web-app-project",
+        "ai-agent-project"
+      ],
+      "tags": [
+        "debugging",
+        "root-cause",
+        "validation"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "change-log-release-notes",
+      "description": "Maintain a daily change journal during development and generate user-readable release notes derived only from those logs.",
+      "path": "skills/change-log-release-notes",
+      "category": "documentation",
+      "source_projects": [
+        "documentation-workflow",
+        "deployment-workflow"
+      ],
+      "tags": [
+        "changelog",
+        "release-notes",
+        "audit"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
     },
     {
       "name": "cinematic-minimal-web",
       "description": "Build restrained presentation-style websites with exceptional typography, graphics, and subtle purposeful motion.",
       "path": "skills/cinematic-minimal-web",
       "category": "frontend",
-      "source_projects": ["local-skill-library"],
-      "tags": ["frontend", "editorial", "motion"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "frontend",
+        "editorial",
+        "motion"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-09-02"
+    },
+    {
+      "name": "claude-remotion-skill",
+      "description": "Teach an agent the motion-design craft rules for building professional Remotion videos, with a mandatory render, inspect, fix, re-render loop.",
+      "path": "skills/claude-remotion-skill",
+      "category": "video",
+      "source_projects": [
+        "haidrrrry/claude-remotion-skill"
+      ],
+      "tags": [
+        "video",
+        "remotion",
+        "motion-craft",
+        "react",
+        "captions"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-11-09",
+      "license": "MIT"
     },
     {
       "name": "creating-video-ads",
       "description": "Turn a product source or brief into a verified short-form video advertisement and delivery-ready render.",
       "path": "skills/creating-video-ads",
       "category": "product",
-      "source_projects": ["local-skill-library"],
-      "tags": ["video", "advertising", "production"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-09-02"
-    },
-    {
-      "name": "design-taste-frontend-v1",
-      "description": "Preserve the original high-agency frontend design behavior for projects that require exact v1 compatibility.",
-      "path": "skills/design-taste-frontend-v1",
-      "category": "frontend",
-      "source_projects": ["local-skill-library"],
-      "tags": ["frontend", "design", "compatibility"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "video",
+        "advertising",
+        "production"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-09-02"
@@ -390,21 +351,148 @@
       "description": "Design distinctive landing pages, portfolios, and redesigns that avoid generic generated-interface patterns.",
       "path": "skills/design-taste-frontend",
       "category": "frontend",
-      "source_projects": ["local-skill-library"],
-      "tags": ["frontend", "design", "anti-template"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "frontend",
+        "design",
+        "anti-template"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-09-02"
+    },
+    {
+      "name": "design-taste-frontend-v1",
+      "description": "Preserve the original high-agency frontend design behavior for projects that require exact v1 compatibility.",
+      "path": "skills/design-taste-frontend-v1",
+      "category": "frontend",
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "frontend",
+        "design",
+        "compatibility"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-09-02"
+    },
+    {
+      "name": "docs-organization",
+      "description": "Keep all documentation in a single categorized /docs tree, prevent stray markdown and SQL files, and keep the project root minimal.",
+      "path": "skills/docs-organization",
+      "category": "documentation",
+      "source_projects": [
+        "documentation-workflow"
+      ],
+      "tags": [
+        "docs",
+        "structure",
+        "hygiene"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "enterprise-delivery-tracker",
+      "description": "Generalized, organization-agnostic structure for multi-team programme delivery: intake, prioritization, RAID, status reports, and governance updates.",
+      "path": "skills/enterprise-delivery-tracker",
+      "category": "banking-domain",
+      "source_projects": [
+        "enterprise-delivery-workflow"
+      ],
+      "tags": [
+        "governance",
+        "raid",
+        "psr",
+        "delivery"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "founder-validation-loop",
+      "description": "Turn experiments into validated, reusable assets via a tight hypothesis -> cheapest test -> signal -> decide -> capture loop.",
+      "path": "skills/founder-validation-loop",
+      "category": "founder-ops",
+      "source_projects": [
+        "founder-ops-workflow"
+      ],
+      "tags": [
+        "validation",
+        "experiment",
+        "reuse"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
     },
     {
       "name": "frontend-design",
       "description": "Design and implement intentional web interfaces with subject-specific identity, disciplined typography, and honest interaction language.",
       "path": "skills/frontend-design",
       "category": "frontend",
-      "source_projects": ["portable-frontend-skill"],
-      "tags": ["frontend", "visual-system", "accessibility"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "portable-frontend-skill"
+      ],
+      "tags": [
+        "frontend",
+        "visual-system",
+        "accessibility"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-09-02"
@@ -414,21 +502,74 @@
       "description": "Ensure exhaustive requested deliverables are complete, explicit, and recoverable across response limits.",
       "path": "skills/full-output-enforcement",
       "category": "ai-agent-workflows",
-      "source_projects": ["local-skill-library"],
-      "tags": ["completeness", "output", "continuation"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "completeness",
+        "output",
+        "continuation"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-09-02"
+    },
+    {
+      "name": "git-release-hygiene",
+      "description": "Safe Git workflow: working-branch-only policy, conventional commits, and an explicit-approval gate before any merge to main or production deploy.",
+      "path": "skills/git-release-hygiene",
+      "category": "devops",
+      "source_projects": [
+        "deployment-workflow",
+        "saas-web-app-project"
+      ],
+      "tags": [
+        "git",
+        "branches",
+        "commits",
+        "release"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
     },
     {
       "name": "gpt-taste",
       "description": "Create expressive high-variance marketing interfaces with advanced GSAP motion and controlled editorial composition.",
       "path": "skills/gpt-taste",
       "category": "frontend",
-      "source_projects": ["local-skill-library"],
-      "tags": ["frontend", "gsap", "motion"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "frontend",
+        "gsap",
+        "motion"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-09-02"
@@ -438,9 +579,22 @@
       "description": "Turn a hackathon brief, time limit, and rubric into a focused problem, golden demo path, build plan, and judge-ready story.",
       "path": "skills/hackathon-pitch-coach",
       "category": "product",
-      "source_projects": ["local-skill-library"],
-      "tags": ["hackathon", "demo", "pitch"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "hackathon",
+        "demo",
+        "pitch"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-09-02"
@@ -450,168 +604,81 @@
       "description": "Raise interface craft through precise typography, spacing, depth, composition, and motion decisions.",
       "path": "skills/high-end-visual-design",
       "category": "frontend",
-      "source_projects": ["local-skill-library"],
-      "tags": ["visual-design", "frontend", "polish"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "visual-design",
+        "frontend",
+        "polish"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-09-02"
     },
     {
-      "name": "image-to-code",
-      "description": "Generate and inspect high-quality visual references, then implement a website that faithfully preserves their hierarchy and intent.",
-      "path": "skills/image-to-code",
+      "name": "huashu-motion",
+      "description": "Make a 30-second product launch film from a one-line brief, with an original score composed in ABC notation and a click-to-fix in-browser editor.",
+      "path": "skills/huashu-motion",
+      "category": "video",
+      "source_projects": [
+        "alchaincyf/huashu-motion"
+      ],
+      "tags": [
+        "video",
+        "launch-film",
+        "composed-music",
+        "gsap",
+        "editor"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-11-09",
+      "license": "MIT"
+    },
+    {
+      "name": "hyperframes-animation",
+      "description": "Use when animating HTML with GSAP or authoring seekable HyperFrames video motion. Includes timeline sequencing, easing, stagger, transforms, SVG path drawing, waterfall text entries, and tactile press reactions.",
+      "path": "skills/hyperframes-animation",
       "category": "frontend",
-      "source_projects": ["local-skill-library"],
-      "tags": ["image-to-code", "frontend", "visual-reference"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
+      "source_projects": [
+        "heygen-com/hyperframes"
+      ],
+      "tags": [
+        "html",
+        "animation",
+        "video",
+        "hyperframes"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
       "status": "stable",
       "public_safe": true,
-      "last_updated": "2026-09-02"
-    },
-    {
-      "name": "imagegen-frontend-mobile",
-      "description": "Generate premium app-native mobile screen concepts and consistent multi-screen flows without implementation code.",
-      "path": "skills/imagegen-frontend-mobile",
-      "category": "frontend",
-      "source_projects": ["local-skill-library"],
-      "tags": ["mobile", "image-generation", "product-design"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-09-02"
-    },
-    {
-      "name": "imagegen-frontend-web",
-      "description": "Generate one implementation-friendly horizontal website reference image for every requested section.",
-      "path": "skills/imagegen-frontend-web",
-      "category": "frontend",
-      "source_projects": ["local-skill-library"],
-      "tags": ["web", "image-generation", "design-reference"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-09-02"
-    },
-    {
-      "name": "industrial-brutalist-ui",
-      "description": "Design dense mechanical interfaces using Swiss grid discipline, tactical telemetry, and restrained analog texture.",
-      "path": "skills/industrial-brutalist-ui",
-      "category": "frontend",
-      "source_projects": ["local-skill-library"],
-      "tags": ["brutalism", "dashboard", "telemetry"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-09-02"
-    },
-    {
-      "name": "minimalist-ui",
-      "description": "Create calm editorial interfaces through warm monochrome color, typographic contrast, flat structure, and disciplined spacing.",
-      "path": "skills/minimalist-ui",
-      "category": "frontend",
-      "source_projects": ["local-skill-library"],
-      "tags": ["minimalism", "editorial", "frontend"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-09-02"
-    },
-    {
-      "name": "optimize-project-infrastructure",
-      "description": "Select the smallest suitable architecture while making cost, availability, security, operations, and upgrade triggers explicit.",
-      "path": "skills/optimize-project-infrastructure",
-      "category": "architecture",
-      "source_projects": ["local-skill-library"],
-      "tags": ["infrastructure", "cost", "architecture"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-09-02"
-    },
-    {
-      "name": "pixel-recap",
-      "description": "Turn approved event or product photographs into a short pixel-art recap with a clear narrative arc.",
-      "path": "skills/pixel-recap",
-      "category": "product",
-      "source_projects": ["local-skill-library"],
-      "tags": ["video", "pixel-art", "storytelling"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-09-02"
-    },
-    {
-      "name": "publish-build-journey",
-      "description": "Turn a verified build milestone into a privacy-checked private story draft with an explicit publication gate.",
-      "path": "skills/publish-build-journey",
-      "category": "documentation",
-      "source_projects": ["local-skill-library"],
-      "tags": ["storytelling", "privacy", "documentation"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-09-02"
-    },
-    {
-      "name": "redesign-existing-projects",
-      "description": "Upgrade an existing interface's visual quality without breaking behavior, data, or integration contracts.",
-      "path": "skills/redesign-existing-projects",
-      "category": "frontend",
-      "source_projects": ["local-skill-library"],
-      "tags": ["redesign", "frontend", "regression-safety"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-09-02"
-    },
-    {
-      "name": "scrapecreators-api",
-      "description": "Retrieve permitted public social-media data through documented API endpoints with minimal scope and transparent limitations.",
-      "path": "skills/scrapecreators-api",
-      "category": "data",
-      "source_projects": ["ScrapeCreators/social-media-research-skills"],
-      "tags": ["social-media", "api", "research"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-09-02"
-    },
-    {
-      "name": "scroll-world",
-      "description": "Build an immersive scroll-scrubbed landing page whose camera moves continuously through connected branded scenes.",
-      "path": "skills/scroll-world",
-      "category": "frontend",
-      "source_projects": ["oso95/scroll-world"],
-      "tags": ["scroll", "video", "immersive-web"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-09-02"
-    },
-    {
-      "name": "stitch-design-taste",
-      "description": "Translate a visual direction into a semantic DESIGN.md that Google Stitch can apply consistently across screens.",
-      "path": "skills/stitch-design-taste",
-      "category": "frontend",
-      "source_projects": ["local-skill-library"],
-      "tags": ["stitch", "design-system", "frontend"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-09-02"
-    },
-    {
-      "name": "ui-ux-pro-max",
-      "description": "Use a searchable design knowledge base to make evidence-backed UI decisions across products, platforms, and technology stacks.",
-      "path": "skills/ui-ux-pro-max",
-      "category": "frontend",
-      "source_projects": ["nextlevelbuilder/ui-ux-pro-max-skill"],
-      "tags": ["ui", "ux", "design-database"],
-      "compatibility": ["claude-code", "codex", "cursor", "github-copilot", "vscode", "antigravity"],
-      "status": "stable",
-      "public_safe": true,
-      "last_updated": "2026-09-02"
+      "last_updated": "2026-10-19",
+      "license": "Apache-2.0",
+      "source_commit": "cea0bad7931122bd93680006978c0d9007daa3d4"
     },
     {
       "name": "hyperframes-core",
@@ -670,18 +737,17 @@
       "source_commit": "cea0bad7931122bd93680006978c0d9007daa3d4"
     },
     {
-      "name": "hyperframes-animation",
-      "description": "Use when animating HTML with GSAP or authoring seekable HyperFrames video motion. Includes timeline sequencing, easing, stagger, transforms, SVG path drawing, waterfall text entries, and tactile press reactions.",
-      "path": "skills/hyperframes-animation",
+      "name": "image-to-code",
+      "description": "Generate and inspect high-quality visual references, then implement a website that faithfully preserves their hierarchy and intent.",
+      "path": "skills/image-to-code",
       "category": "frontend",
       "source_projects": [
-        "heygen-com/hyperframes"
+        "local-skill-library"
       ],
       "tags": [
-        "html",
-        "animation",
-        "video",
-        "hyperframes"
+        "image-to-code",
+        "frontend",
+        "visual-reference"
       ],
       "compatibility": [
         "claude-code",
@@ -693,9 +759,868 @@
       ],
       "status": "stable",
       "public_safe": true,
-      "last_updated": "2026-10-19",
-      "license": "Apache-2.0",
-      "source_commit": "cea0bad7931122bd93680006978c0d9007daa3d4"
+      "last_updated": "2026-09-02"
+    },
+    {
+      "name": "imagegen-frontend-mobile",
+      "description": "Generate premium app-native mobile screen concepts and consistent multi-screen flows without implementation code.",
+      "path": "skills/imagegen-frontend-mobile",
+      "category": "frontend",
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "mobile",
+        "image-generation",
+        "product-design"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-09-02"
+    },
+    {
+      "name": "imagegen-frontend-web",
+      "description": "Generate one implementation-friendly horizontal website reference image for every requested section.",
+      "path": "skills/imagegen-frontend-web",
+      "category": "frontend",
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "web",
+        "image-generation",
+        "design-reference"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-09-02"
+    },
+    {
+      "name": "industrial-brutalist-ui",
+      "description": "Design dense mechanical interfaces using Swiss grid discipline, tactical telemetry, and restrained analog texture.",
+      "path": "skills/industrial-brutalist-ui",
+      "category": "frontend",
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "brutalism",
+        "dashboard",
+        "telemetry"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-09-02"
+    },
+    {
+      "name": "input-validation-prompt-safety",
+      "description": "Validate external input before use, allowlist commands and senders, and harden LLM prompts against injection so untrusted input cannot break logic or hijack an agent.",
+      "path": "skills/input-validation-prompt-safety",
+      "category": "security",
+      "source_projects": [
+        "backend-api-project",
+        "ai-agent-project"
+      ],
+      "tags": [
+        "validation",
+        "prompt-injection",
+        "security"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "lean-project-structure",
+      "description": "Scaffold or untangle a project into a lean, single-responsibility layout with clear layer boundaries and a no-unnecessary-files rule.",
+      "path": "skills/lean-project-structure",
+      "category": "architecture",
+      "source_projects": [
+        "saas-web-app-project",
+        "backend-api-project"
+      ],
+      "tags": [
+        "structure",
+        "maintainability",
+        "layering"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "llm-eval-golden-set",
+      "description": "Build a small golden set of inputs with expected qualities and a repeatable eval script to measure LLM-feature quality and catch regressions.",
+      "path": "skills/llm-eval-golden-set",
+      "category": "ai-agent-workflows",
+      "source_projects": [
+        "ai-agent-project"
+      ],
+      "tags": [
+        "eval",
+        "testing",
+        "quality",
+        "regression"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "llm-prompt-design",
+      "description": "Centralize LLM prompts, separate role/tone from structure from per-call context, and apply anti-AI-slop rules for human-sounding, maintainable output.",
+      "path": "skills/llm-prompt-design",
+      "category": "ai-agent-workflows",
+      "source_projects": [
+        "ai-agent-project",
+        "saas-web-app-project"
+      ],
+      "tags": [
+        "prompts",
+        "tone",
+        "humanizer"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "local-first-ai-automation",
+      "description": "Build personal automations on a local LLM and browser automation with allowlisted triggers, no destructive actions, and graceful timeouts.",
+      "path": "skills/local-first-ai-automation",
+      "category": "ai-agent-workflows",
+      "source_projects": [
+        "ai-agent-project"
+      ],
+      "tags": [
+        "local",
+        "automation",
+        "safety",
+        "ollama"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "minimalist-ui",
+      "description": "Create calm editorial interfaces through warm monochrome color, typographic contrast, flat structure, and disciplined spacing.",
+      "path": "skills/minimalist-ui",
+      "category": "frontend",
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "minimalism",
+        "editorial",
+        "frontend"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-09-02"
+    },
+    {
+      "name": "motion-skill",
+      "description": "Create 60fps motion-graphic explainers and speech-synced B-roll, and isolate subjects from video locally with Meta's SAM 2.",
+      "path": "skills/motion-skill",
+      "category": "video",
+      "source_projects": [
+        "mrrajrumel/motion-skill"
+      ],
+      "tags": [
+        "video",
+        "60fps",
+        "motion-blur",
+        "sam2",
+        "b-roll"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-11-09",
+      "license": "MIT"
+    },
+    {
+      "name": "motion-studio",
+      "description": "Type one prompt and get a finished motion-graphics video: storyboard, voiceover, headless-Chromium render, and a loudness-normalised mix.",
+      "path": "skills/motion-studio",
+      "category": "video",
+      "source_projects": [
+        "BMatiashchuk99/Claude-Skills"
+      ],
+      "tags": [
+        "video",
+        "motion-graphics",
+        "kinetic-type",
+        "html-to-mp4",
+        "tts"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-11-09",
+      "license": "MIT"
+    },
+    {
+      "name": "motion-video",
+      "description": "Make narrated 9:16 motion-graphic explainers in one of 11 distinct visual styles, voiceover-first and with zero paid APIs.",
+      "path": "skills/motion-video",
+      "category": "video",
+      "source_projects": [
+        "nxrskyaa/muse-motion-skills"
+      ],
+      "tags": [
+        "video",
+        "9:16",
+        "explainer",
+        "voiceover-first",
+        "styles"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-11-09",
+      "license": "MIT"
+    },
+    {
+      "name": "motion-video-director",
+      "description": "Turn a coding agent into a video production team that plans, animates, edits real footage, voices, and sound-designs complete videos.",
+      "path": "skills/motion-video-director",
+      "category": "video",
+      "source_projects": [
+        "Miftahul-Islam-Efaz/Motion-graphics-skill"
+      ],
+      "tags": [
+        "video",
+        "production-team",
+        "footage-editing",
+        "sam2",
+        "voiceover"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "draft",
+      "public_safe": true,
+      "last_updated": "2026-11-09"
+    },
+    {
+      "name": "openmontage",
+      "description": "Turn an AI coding assistant into a video production studio across 12 pipelines, with cost estimates and a budget cap before execution.",
+      "path": "skills/openmontage",
+      "category": "video",
+      "source_projects": [
+        "calesthio/OpenMontage"
+      ],
+      "tags": [
+        "video",
+        "production-studio",
+        "pipelines",
+        "budget",
+        "documentary"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-11-09",
+      "license": "AGPL-3.0"
+    },
+    {
+      "name": "optimize-project-infrastructure",
+      "description": "Select the smallest suitable architecture while making cost, availability, security, operations, and upgrade triggers explicit.",
+      "path": "skills/optimize-project-infrastructure",
+      "category": "architecture",
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "infrastructure",
+        "cost",
+        "architecture"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-09-02"
+    },
+    {
+      "name": "pixel-recap",
+      "description": "Turn approved event or product photographs into a short pixel-art recap with a clear narrative arc.",
+      "path": "skills/pixel-recap",
+      "category": "product",
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "video",
+        "pixel-art",
+        "storytelling"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-09-02"
+    },
+    {
+      "name": "prd-to-build-plan",
+      "description": "Convert a product idea or PRD into a phased, buildable plan with goals, non-goals, scope, milestones, and acceptance criteria.",
+      "path": "skills/prd-to-build-plan",
+      "category": "documentation",
+      "source_projects": [
+        "documentation-workflow",
+        "founder-ops-workflow"
+      ],
+      "tags": [
+        "prd",
+        "planning",
+        "scope"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "public-repo-safety-scan",
+      "description": "Scan staged changes and the working tree for secrets, private URLs, internal IPs, personal data, and client references before a repo goes public.",
+      "path": "skills/public-repo-safety-scan",
+      "category": "security",
+      "source_projects": [
+        "founder-ops-workflow",
+        "deployment-workflow"
+      ],
+      "tags": [
+        "secrets",
+        "privacy",
+        "public-safe"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "publish-build-journey",
+      "description": "Turn a verified build milestone into a privacy-checked private story draft with an explicit publication gate.",
+      "path": "skills/publish-build-journey",
+      "category": "documentation",
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "storytelling",
+        "privacy",
+        "documentation"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-09-02"
+    },
+    {
+      "name": "railway-deployment-check",
+      "description": "Verify runtime files, env vars, and start command for managed-platform deploys (Railway, Render, Fly.io), favor auto-detection, and plan rollback.",
+      "path": "skills/railway-deployment-check",
+      "category": "deployment",
+      "source_projects": [
+        "deployment-workflow",
+        "saas-web-app-project"
+      ],
+      "tags": [
+        "deploy",
+        "railway",
+        "paas",
+        "rollback"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "redesign-existing-projects",
+      "description": "Upgrade an existing interface's visual quality without breaking behavior, data, or integration contracts.",
+      "path": "skills/redesign-existing-projects",
+      "category": "frontend",
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "redesign",
+        "frontend",
+        "regression-safety"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-09-02"
+    },
+    {
+      "name": "repo-readiness-review",
+      "description": "Run a readiness pass over a repo (safety, structure, docs, dependencies, runnability) and return a go / fix-first verdict with a prioritized punch list.",
+      "path": "skills/repo-readiness-review",
+      "category": "devops",
+      "source_projects": [
+        "deployment-workflow",
+        "founder-ops-workflow"
+      ],
+      "tags": [
+        "readiness",
+        "handoff",
+        "audit"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "resilient-batch-processing",
+      "description": "Process many files or records so one bad item never stops the run: isolate failures, log with identifiers, clean up temp files, and summarize results and errors.",
+      "path": "skills/resilient-batch-processing",
+      "category": "data",
+      "source_projects": [
+        "analytics-dashboard-project",
+        "backend-api-project"
+      ],
+      "tags": [
+        "batch",
+        "resilience",
+        "imports",
+        "ocr"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "saas-mvp-planner",
+      "description": "Shape a SaaS idea into a buildable MVP: one core user, one problem, the smallest valuable solution, a happy-path journey, and an explicit not-now list.",
+      "path": "skills/saas-mvp-planner",
+      "category": "product",
+      "source_projects": [
+        "saas-web-app-project",
+        "founder-ops-workflow"
+      ],
+      "tags": [
+        "mvp",
+        "scope",
+        "product"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "safe-ui-enhancement",
+      "description": "Restyle an existing UI without breaking it: read the brand reference, map JS/auth hooks, propose changes before editing, and verify responsive + accessibility.",
+      "path": "skills/safe-ui-enhancement",
+      "category": "frontend",
+      "source_projects": [
+        "frontend-ui-project",
+        "saas-web-app-project"
+      ],
+      "tags": [
+        "ui",
+        "brand",
+        "responsive",
+        "accessibility"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "scrapecreators-api",
+      "description": "Retrieve permitted public social-media data through documented API endpoints with minimal scope and transparent limitations.",
+      "path": "skills/scrapecreators-api",
+      "category": "data",
+      "source_projects": [
+        "ScrapeCreators/social-media-research-skills"
+      ],
+      "tags": [
+        "social-media",
+        "api",
+        "research"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-09-02"
+    },
+    {
+      "name": "scroll-world",
+      "description": "Build an immersive scroll-scrubbed landing page whose camera moves continuously through connected branded scenes.",
+      "path": "skills/scroll-world",
+      "category": "frontend",
+      "source_projects": [
+        "oso95/scroll-world"
+      ],
+      "tags": [
+        "scroll",
+        "video",
+        "immersive-web"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-09-02"
+    },
+    {
+      "name": "secure-env-setup",
+      "description": "Environment-variable-driven config with a placeholder-only .env.example and startup validation, so no secret is ever hardcoded or committed.",
+      "path": "skills/secure-env-setup",
+      "category": "security",
+      "source_projects": [
+        "deployment-workflow",
+        "backend-api-project"
+      ],
+      "tags": [
+        "env",
+        "secrets",
+        "config"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "stitch-design-taste",
+      "description": "Translate a visual direction into a semantic DESIGN.md that Google Stitch can apply consistently across screens.",
+      "path": "skills/stitch-design-taste",
+      "category": "frontend",
+      "source_projects": [
+        "local-skill-library"
+      ],
+      "tags": [
+        "stitch",
+        "design-system",
+        "frontend"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-09-02"
+    },
+    {
+      "name": "supabase-data-design",
+      "description": "Design Postgres/Supabase-style schemas with consistent naming, row-level security by default, sensible indexes, and a clear tables-vs-JSON decision.",
+      "path": "skills/supabase-data-design",
+      "category": "data",
+      "source_projects": [
+        "backend-api-project",
+        "analytics-dashboard-project"
+      ],
+      "tags": [
+        "database",
+        "supabase",
+        "rls",
+        "schema"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "think-before-coding",
+      "description": "Evaluate at least three distinct solution approaches with brief trade-offs before implementing, so the chosen design fits the existing codebase.",
+      "path": "skills/think-before-coding",
+      "category": "coding",
+      "source_projects": [
+        "ai-agent-project",
+        "saas-web-app-project"
+      ],
+      "tags": [
+        "planning",
+        "design",
+        "trade-offs"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-06-03"
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "description": "Use a searchable design knowledge base to make evidence-backed UI decisions across products, platforms, and technology stacks.",
+      "path": "skills/ui-ux-pro-max",
+      "category": "frontend",
+      "source_projects": [
+        "nextlevelbuilder/ui-ux-pro-max-skill"
+      ],
+      "tags": [
+        "ui",
+        "ux",
+        "design-database"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-09-02"
+    },
+    {
+      "name": "video-shotcraft",
+      "description": "Make a cinematic product promo from real screenshots, storyboarded from 124 shot recipes and animated in Remotion, cut to the beat.",
+      "path": "skills/video-shotcraft",
+      "category": "video",
+      "source_projects": [
+        "Vincentwei1021/video-shotcraft"
+      ],
+      "tags": [
+        "video",
+        "product-promo",
+        "remotion",
+        "screenshots",
+        "beat-sync"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-11-09",
+      "license": "Apache-2.0"
     }
   ]
 }
