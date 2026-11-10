@@ -1,6 +1,6 @@
 # Skill Index
 
-61 skills across 15 categories. Each skill lives in `skills/<name>/SKILL.md` and is compatible with Claude Code, Codex, Cursor, GitHub Copilot / VS Code, and Antigravity.
+63 skills across 15 categories. Each skill lives in `skills/<name>/SKILL.md` and is compatible with Claude Code, Codex, Cursor, GitHub Copilot / VS Code, and Antigravity.
 
 ## ai-agent-workflows
 
@@ -99,8 +99,10 @@
 ## video
 
 - **agentic-motion-graphics** — Turn a reference video, article, or brief into a word-synced HTML/GSAP video with voiceover, rendered through HyperFrames. _Use when the voiceover must drive the visuals word by word._
+- **animate-video-flow** — Produce a finished narrated 9:16 video with the animate skill: look check, storyboard, build, measured delivery checks, loudnorm, verify, deliver — plus the music-swap procedure. _Use when a video must go from brief to a verified MP4 for a human verdict._
 - **claude-remotion-skill** — Teach an agent the motion-design craft rules for professional Remotion videos, with a mandatory render-inspect-fix loop. _Use when standardising on Remotion and wanting the craft discipline layer._
 - **huashu-motion** — Make a 30-second product launch film from a one-line brief, with an original composed score and a click-to-fix editor. _Use for a 30-second launch film with original composed music._
+- **motion-design-taste** — Judge and direct motion graphics by the taste rules that make a cut feel premium: one idea at a time, real imagery, odometer counters, kinetic type, cut-paper warmth, and music that matches the animation's energy. _Use when judging a cut or directing a rebuild._
 - **motion-skill** — Create 60fps motion-graphic explainers and speech-synced B-roll, and isolate subjects from video locally with SAM 2. _Use for the smoothest 60fps motion or cutting a subject out of footage locally._
 - **motion-studio** — Type one prompt, get a finished motion-graphics video with storyboard, voiceover, and a loudness-normalised mix. _Use when one prompt should produce a finished motion-graphics video._
 - **motion-video** — Make narrated 9:16 motion-graphic explainers in one of 11 distinct visual styles, voiceover-first, with zero paid APIs. _Use for narrated 9:16 explainers where every video needs a different look._
