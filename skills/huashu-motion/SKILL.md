@@ -1,6 +1,6 @@
 ---
 name: huashu-motion
-description: Use when a one-line brief should become a 30-second product launch film: animated motion graphics in code, an original score composed in ABC notation from sampled instruments, and voiceover, with a click-to-fix editor for revisions.
+description: "Use when a one-line brief should become a 30-second product launch film: animated motion graphics in code, an original score composed in ABC notation from sampled instruments, and voiceover, with a click-to-fix editor for revisions."
 license: MIT
 ---
 

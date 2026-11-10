@@ -1,6 +1,6 @@
 ---
 name: motion-skill
-description: Use when motion must look its smoothest: standalone 60fps motion-graphic explainers, speech-synced B-roll and cutaways for talking-head videos, or isolating a subject from video backgrounds with Meta's SAM 2, running 100% locally.
+description: "Use when motion must look its smoothest: standalone 60fps motion-graphic explainers, speech-synced B-roll and cutaways for talking-head videos, or isolating a subject from video backgrounds with Meta's SAM 2, running 100% locally."
 license: MIT
 ---
 

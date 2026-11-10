@@ -1,6 +1,6 @@
 ---
 name: claude-remotion-skill
-description: Use when building or editing professional motion-graphics videos with Remotion (React + TypeScript): springs, staggered choreography, colour grades, film grain, Ken Burns, word-synced captions, and sound design, from a single prompt.
+description: "Use when building or editing professional motion-graphics videos with Remotion (React + TypeScript): springs, staggered choreography, colour grades, film grain, Ken Burns, word-synced captions, and sound design, from a single prompt."
 license: MIT
 ---
 
