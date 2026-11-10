@@ -3,10 +3,10 @@
   "author": "Tanveer Riaz",
   "tagline": "Reusable AI-agent skills for builders who ship.",
   "description": "A public marketplace of practical Agent Skills that help AI coding agents move from prompt chaos to repeatable execution across coding, debugging, architecture, security, deployment, documentation, product, and enterprise delivery.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "spec": "https://agentskills.io/specification",
   "repository": "https://github.com/tanveerriaz/Skillz",
-  "last_updated": "2026-11-09",
+  "last_updated": "2026-11-10",
   "compatibility": [
     "claude-code",
     "codex",
@@ -163,6 +163,36 @@
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-06-03"
+    },
+    {
+      "name": "animate-video-flow",
+      "description": "Produce a finished narrated 9:16 video with the animate skill: look check, storyboard, build, measured delivery checks, loudnorm, verify, deliver \u2014 plus the music-swap procedure.",
+      "path": "skills/animate-video-flow",
+      "category": "video",
+      "source_projects": [
+        "cth9191/animate"
+      ],
+      "tags": [
+        "video",
+        "9:16",
+        "production",
+        "look-check",
+        "music-swap",
+        "loudnorm",
+        "verification"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-11-10",
+      "license": "MIT"
     },
     {
       "name": "api-service-pattern",
@@ -990,6 +1020,33 @@
       "status": "stable",
       "public_safe": true,
       "last_updated": "2026-09-02"
+    },
+    {
+      "name": "motion-design-taste",
+      "description": "Judge and direct motion graphics by the taste rules that make a cut feel premium: one idea at a time, real imagery, odometer counters, kinetic type, cut-paper warmth, and music that matches the animation's energy.",
+      "path": "skills/motion-design-taste",
+      "category": "video",
+      "source_projects": [],
+      "tags": [
+        "video",
+        "motion-design",
+        "taste",
+        "critique",
+        "kinetic-type",
+        "counters"
+      ],
+      "compatibility": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "github-copilot",
+        "vscode",
+        "antigravity"
+      ],
+      "status": "stable",
+      "public_safe": true,
+      "last_updated": "2026-11-10",
+      "license": "MIT"
     },
     {
       "name": "motion-skill",
