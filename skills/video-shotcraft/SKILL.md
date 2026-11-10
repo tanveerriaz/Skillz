@@ -1,6 +1,6 @@
 ---
 name: video-shotcraft
-description: Use when a product promo must be built from your real pages, not generated footage: capture real screenshots, storyboard from a library of tuned shot recipes, animate in Remotion, cut to the beat, add sound design, and check every frame.
+description: "Use when a product promo must be built from your real pages, not generated footage: capture real screenshots, storyboard from a library of tuned shot recipes, animate in Remotion, cut to the beat, add sound design, and check every frame."
 license: Apache-2.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: agentic-motion-graphics
-description: Use when a video must be produced like a shoot: research a reference, write a scene-by-scene script, voice it, align every word to the timeline with forced alignment, and render HTML/GSAP scenes to MP4 through HyperFrames.
+description: "Use when a video must be produced like a shoot: research a reference, write a scene-by-scene script, voice it, align every word to the timeline with forced alignment, and render HTML/GSAP scenes to MP4 through HyperFrames."
 license: not stated — verify before commercial reuse
 ---
 

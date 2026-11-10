@@ -1,6 +1,6 @@
 ---
 name: animate-video-flow
-description: Produce a finished narrated 9:16 video with the animate skill: look check, storyboard, build, measured delivery checks, loudnorm, verify, deliver — plus the music-swap procedure.
+description: "Produce a finished narrated 9:16 video with the animate skill: look check, storyboard, build, measured delivery checks, loudnorm, verify, deliver — plus the music-swap procedure."
 license: MIT
 ---
 

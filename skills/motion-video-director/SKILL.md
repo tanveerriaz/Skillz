@@ -1,6 +1,6 @@
 ---
 name: motion-video-director
-description: Use when one skill must do the whole production: plan, animate, edit real footage and talking-head clips, voice, and sound-design complete videos with Claude Code, Codex, or Cursor, rendering everything locally with no After Effects or Premiere.
+description: "Use when one skill must do the whole production: plan, animate, edit real footage and talking-head clips, voice, and sound-design complete videos with Claude Code, Codex, or Cursor, rendering everything locally with no After Effects or Premiere."
 license: not stated — verify before commercial reuse
 ---
 

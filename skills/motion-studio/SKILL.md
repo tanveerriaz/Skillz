@@ -1,6 +1,6 @@
 ---
 name: motion-studio
-description: Use when one prompt should become a finished motion-graphics video: a promo, explainer, or launch cut built from HTML/CSS/Three.js scenes, with voiceover, captions, and a mixed soundtrack, without opening After Effects or Premiere.
+description: "Use when one prompt should become a finished motion-graphics video: a promo, explainer, or launch cut built from HTML/CSS/Three.js scenes, with voiceover, captions, and a mixed soundtrack, without opening After Effects or Premiere."
 license: MIT
 ---
 

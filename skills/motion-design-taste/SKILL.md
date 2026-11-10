@@ -1,6 +1,6 @@
 ---
 name: motion-design-taste
-description: Judge and direct motion graphics by the taste rules that make a cut feel premium: one idea at a time, real imagery, odometer counters, kinetic type, cut-paper warmth, and music that matches the animation's energy.
+description: "Judge and direct motion graphics by the taste rules that make a cut feel premium: one idea at a time, real imagery, odometer counters, kinetic type, cut-paper warmth, and music that matches the animation's energy."
 license: MIT
 ---
 

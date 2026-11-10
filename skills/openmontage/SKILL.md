@@ -1,6 +1,6 @@
 ---
 name: openmontage
-description: Use when one skill is not enough and the job needs a full film: research, narration, music, subtitles, and a costed plan, across 12 production pipelines, with a human approving creative choices and a budget cap before anything runs.
+description: "Use when one skill is not enough and the job needs a full film: research, narration, music, subtitles, and a costed plan, across 12 production pipelines, with a human approving creative choices and a budget cap before anything runs."
 license: AGPL-3.0
 ---
 

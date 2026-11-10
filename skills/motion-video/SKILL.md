@@ -1,6 +1,6 @@
 ---
 name: motion-video
-description: Use when a 9:16 motion-graphic explainer must be narrated, kinetic, and never generic: the voiceover leads, the scenes follow, and the look comes from a library of 11 distinct styles, with zero paid APIs.
+description: "Use when a 9:16 motion-graphic explainer must be narrated, kinetic, and never generic: the voiceover leads, the scenes follow, and the look comes from a library of 11 distinct styles, with zero paid APIs."
 license: MIT
 ---
 
